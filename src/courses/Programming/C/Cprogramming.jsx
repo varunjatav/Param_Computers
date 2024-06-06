@@ -9,23 +9,26 @@ const Cprogramming = () => {
     <section id="c">
       <div className="rounded-[40px]  bg-[url('./c_programming.png')] bg-cover bg-no-repeat bg-center mx-10 h-80 "></div>
       <div className="flex flex-col  justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
-      <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-96 p-10">
+      <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-[450px] p-10">
         <h2 className="font-bold text-xl mb-2">Course Content</h2>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
-          <MdOutlineLiveTv /> 4 months live classes
+          <MdOutlineLiveTv />3 Months live classes 
         </p>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
           <FaLaptopCode /> hands on training
         </p>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
-          <GoProjectSymlink /> live projects
+          <GoProjectSymlink /> problem solving
         </p>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
           <TbCertificate /> certificate of completion
         </p>
         <hr className="my-8" />
+        <p className="font-bold text-2xl text-emerald-700 pb-3">
+          &#8377;  4999
+        </p>
         <p className="font-bold text-2xl text-emerald-700 pb-5">
-          &#8377; 14000
+          &#8377;  500 (Registration)
         </p>
         <button
           type="button"

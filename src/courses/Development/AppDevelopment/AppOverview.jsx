@@ -1,7 +1,7 @@
 import React from "react";
 import { TiTick } from "react-icons/ti";
 
-const Overview = () => {
+const AppOverview = () => {
   return (
     <div className="pt-10">
       <h1 className="font-bold text-3xl mb-5">Description</h1>
@@ -37,4 +37,4 @@ const Overview = () => {
   );
 };
 
-export default Overview;
+export default AppOverview;

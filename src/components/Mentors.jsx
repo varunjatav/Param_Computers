@@ -48,6 +48,12 @@ const sliderImageUrl = [
   }
 ];
 const Slider = () => {
+  const customAnimation = {
+    // Define your custom animation styles here
+    transform: 'translateX(-50%)',
+    transition: 'transform .5s ease-in-out',
+    cursor: 'pointer'
+  };
   return (
 <section>
     <center className="mb-5">
@@ -57,20 +63,23 @@ const Slider = () => {
   </center>
     <div className="parent">
       <Carousel
+       customTransition="transform .5s ease-in-out"
         responsive={responsive}
         autoPlay={true}
+        autoPlaySpeed={1000} // Adjust speed as needed
         swipeable={true}
         draggable={true}
         showDots={false}
         infinite={true}
         partialVisible={false}
         dotListClass="custom-dot-list-style"
+        pauseOnHover={true}
       >
 
         {sliderImageUrl.map((imageUrl, index) => {
           return (
-            <div className="slider" key={index}>
-              <img src={imageUrl.url} alt="movie" />
+            <div className="slider" style={customAnimation} key={index}>
+              <img src={imageUrl.url} alt="mentors"  />
               <center>
                     <h3 className='font-bold text-2xl font-mono'>Jack</h3>
                     <p className='text-gray-600 font-semibold'>Social teacher</p>
