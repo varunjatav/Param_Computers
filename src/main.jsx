@@ -5,6 +5,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import MainContainer from './screens/MainContainer.jsx'
+import AppDevelopment from './courses/AppDevelopment.jsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -13,6 +14,10 @@ const router = createBrowserRouter([{
   {
     path: "/",
     element: <MainContainer/>
+  },
+  {
+    path: "/app-development-course",
+    element: <AppDevelopment/>
   }
   ]
 }])
