@@ -1,5 +1,5 @@
 import React from "react";
-import { TfiHeadphoneAlt } from "react-icons/tfi";
+import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FcAssistant } from "react-icons/fc";
 import { RiCalendarScheduleLine } from "react-icons/ri";
 const PassionBanner = () => {
@@ -24,7 +24,7 @@ const PassionBanner = () => {
           <section className="flex flex-col lg:flex-row items-center justify-between">
             <article>
               <div className="bg-teal-400 rounded-md h-12 w-12 mb-4 flex items-center justify-center m-auto md:m-0">
-                <TfiHeadphoneAlt className="text-xl text-teal-800" />
+                <FcAssistant className="text-3xl text-teal-800" />
               </div>
               <h3 className="text-teal-800 text-xl font-bold">
                 24/7 Live Support
@@ -36,7 +36,7 @@ const PassionBanner = () => {
             </article>
             <article>
               <div className="bg-teal-400 rounded-md h-12 w-12 mb-4 flex items-center justify-center  m-auto md:m-0">
-                <FcAssistant className="text-3xl" />
+                <MdOutlineMarkEmailRead className="text-3xl text-teal-800" />
               </div>
               <h3 className="text-teal-800 text-xl font-bold">
                 Email Assistance
@@ -48,7 +48,7 @@ const PassionBanner = () => {
             </article>
             <article>
               <div className="bg-teal-400 rounded-md h-12 w-12 mb-4 flex items-center justify-center m-auto md:m-0">
-                <RiCalendarScheduleLine className="text-xl text-teal-800 " />
+                <RiCalendarScheduleLine className="text-3xl text-teal-800 " />
               </div>
               <h3 className="text-teal-800 text-xl font-bold">
                Book your Schedule
@@ -65,6 +65,7 @@ const PassionBanner = () => {
             className="object-cover object-center rounded-xl w-[1000px] h-[600px] m-auto"
             alt="param_computers_students"
             src="./passion.jpg"
+            loading="lazy"
           />
         </div>
       </div>

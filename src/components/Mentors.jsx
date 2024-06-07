@@ -79,7 +79,7 @@ const Slider = () => {
         {sliderImageUrl.map((imageUrl, index) => {
           return (
             <div className="slider" style={customAnimation } key={index}>
-              <img src={imageUrl.url} alt="mentors" className="h-80 w-44" style={{borderRadius:"20px 20px 0 0"}} />
+              <img src={imageUrl.url} alt="mentors" className="h-80 w-44" style={{borderRadius:"20px 20px 0 0"}} loading="lazy"/>
               <center>
                     <h3 className='font-bold text-2xl font-mono'>Jack</h3>
                     <p className='text-gray-600 font-semibold'>Social teacher</p>

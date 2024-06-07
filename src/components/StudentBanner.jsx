@@ -9,6 +9,7 @@ const StudentBanner = () => {
             className="object-cover object-center rounded-xl w-[500px] h-[600px] m-auto"
             alt="param_computers_students"
             src="./students.webp"
+            loading="lazy"
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
