@@ -56,9 +56,9 @@ const Slider = () => {
   };
   return (
 <section>
-    <center className="mb-5">
+    <center className="py-14">
     <h1 className="text-3xl uppercase font-semibold ">
-      Get to <span className='text-emerald-400'> Know Your </span> Mentors
+      Get to <span className='text-teal-400'> Know Your </span> Mentors
     </h1>
   </center>
     <div className="parent">
@@ -78,8 +78,8 @@ const Slider = () => {
 
         {sliderImageUrl.map((imageUrl, index) => {
           return (
-            <div className="slider" style={customAnimation} key={index}>
-              <img src={imageUrl.url} alt="mentors"  />
+            <div className="slider" style={customAnimation } key={index}>
+              <img src={imageUrl.url} alt="mentors" className="h-80 w-44" style={{borderRadius:"20px 20px 0 0"}} />
               <center>
                     <h3 className='font-bold text-2xl font-mono'>Jack</h3>
                     <p className='text-gray-600 font-semibold'>Social teacher</p>

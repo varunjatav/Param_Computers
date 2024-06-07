@@ -1,7 +1,8 @@
 import React from "react";
-import Courses from "./Courses";
+import Courses from "../components/Courses";
 import Mentors from "../components/Mentors";
-import Founder from "./Founder";
+import StudentBanner from "../components/StudentBanner";
+import PassionBanner from "../components/PassionBanner";
 
 
 const MainContainer = () => {
@@ -10,11 +11,11 @@ const MainContainer = () => {
       <main >
         <section
           id="hero_image"
-          className="bg-gradient-to-b from-white to-emerald-100 pt-10"
+          className="bg-gradient-to-b from-white to-teal-100 pt-10"
         >
           <center>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold leading-[60px] lg:leading-[100px] uppercase">
-              <span className="text-emerald-400">
+              <span className="text-teal-400">
                 Computer Coaching Institute
               </span>
               <br />
@@ -40,8 +41,9 @@ const MainContainer = () => {
         </section>
 
        <Courses/>
-       <Founder/>
+       <StudentBanner/>
        <Mentors/>
+       <PassionBanner/>
       </main>
     </>
   );

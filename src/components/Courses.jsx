@@ -5,7 +5,7 @@ const Courses = () => {
   return (
     <section id="courses" className="py-24">
           <center className="pb-16">
-            <h1 className="text-3xl uppercase font-semibold text-emerald-400">
+            <h1 className="text-3xl uppercase font-semibold text-teal-400">
               Courses For You
             </h1>
           </center>
