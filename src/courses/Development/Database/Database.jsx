@@ -7,7 +7,7 @@ import { Link, Outlet } from "react-router-dom";
 const Database = () => {
   return (
     <section id="database">
-      <div className="rounded-[40px]  bg-[url('./database.png')] bg-cover bg-no-repeat bg-center mx-10 h-80 "></div>
+      <div className="rounded-[40px]  bg-[url('https://learnsql.com/blog/what-is-dbms/DBMS.png')] bg-cover bg-no-repeat bg-center mx-10 h-80 "></div>
       <div className="flex flex-col justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-96 p-10">
         <h2 className="font-bold text-xl mb-2">Course Content</h2>

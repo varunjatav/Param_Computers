@@ -62,7 +62,7 @@ const Courses = () => {
 
             <Link to="/development/digital-marketing-course">
             <div className="cursor-pointer">
-              <div className="h-[250px] mb-5 bg-[url('./digital_marketing.avif')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://www.berlinsbi.com/uploads/sites/2/2021/12/5-ways-msc-digital-marketing-will-advance-your-career.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                   Digital Marketing
@@ -78,7 +78,7 @@ const Courses = () => {
 
            <Link to="/development/advance-excel-course">
             <div className="cursor-pointer">
-              <div className="h-[250px] mb-5 bg-[url('./Excel.webp')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://images.ctfassets.net/lzny33ho1g45/2S0H6GfYCc2HqJb0tQIvPQ/f188f5eb70a93984e9b42153d257e622/excel_hero.jpg?w=1520&fm=jpg&q=30&fit=thumb&h=760')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                   Advance Excel
@@ -94,7 +94,7 @@ const Courses = () => {
 
             <Link to="/development/database-course">
             <div className="cursor-pointer">
-              <div className="h-[250px] bg-[url('./database.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] bg-[url('https://learnsql.com/blog/what-is-dbms/DBMS.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">Database</h2>
                 <p className="text-gray-400">
@@ -113,7 +113,7 @@ const Courses = () => {
 
             <Link to="/programming/java"> 
             <div className="cursor-pointer group">
-              <div className="h-[250px] mb-5 bg-[url('./java_programming.webp')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://www.uttarainfo.com/blog/wp-content/uploads/2023/06/screenshot-2021-02-11-at-115416.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                  Core Java  
@@ -128,7 +128,7 @@ const Courses = () => {
             </Link>
             <Link to="/programming/c">
             <div className="cursor-pointer group">
-              <div className="h-[250px] mb-5 bg-[url('./c_programming.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230630120259/C-Language-Introduction.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                   Mastering C Programming
@@ -143,7 +143,7 @@ const Courses = () => {
             </Link>
             <Link to="/programming/c++">
             <div className="cursor-pointer group">
-              <div className="h-[250px] mb-5 bg-[url('./c++.jpeg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://d3mxt5v3yxgcsr.cloudfront.net/courses/7934/course_7934_image.jpeg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                   Introduction to C++
@@ -158,7 +158,7 @@ const Courses = () => {
             </Link>
             <Link to="/programming/python">
             <div className="cursor-pointer">
-              <div className="h-[250px] mb-5 bg-[url('./python.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://c4.wallpaperflare.com/wallpaper/645/96/47/python-programming-programming-programming-language-code-hd-wallpaper-preview.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                   Python Programming
