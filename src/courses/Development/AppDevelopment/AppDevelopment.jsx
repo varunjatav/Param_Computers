@@ -7,7 +7,7 @@ import { Link, Outlet } from "react-router-dom";
 const AppDevelopment = () => {
   return (
     <section id="app_developement">
-      <div className="rounded-[40px]  bg-[url('./mobile_app_development.jpg')] bg-cover bg-no-repeat bg-top mx-10 h-80 "></div>
+      <div className="rounded-[40px]  bg-[url('https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg')] bg-cover bg-no-repeat bg-top mx-10 h-80 "></div>
       <div className="flex flex-col justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-96 p-10">
         <h2 className="font-bold text-xl mb-2">Course Content</h2>

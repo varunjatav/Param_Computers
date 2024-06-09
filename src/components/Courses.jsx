@@ -15,7 +15,7 @@ const Courses = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
             <Link to='/development/web-development-course'>
             <div className="cursor-pointer group">
-              <div className="h-[250px] mb-5 bg-[url('./web_development.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://static.vecteezy.com/system/resources/previews/000/271/024/non_2x/vector-web-development-web-banner.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                   Web Development
@@ -30,7 +30,7 @@ const Courses = () => {
             </Link>
             <Link to="/development/app-development-course">
             <div className="cursor-pointer group">
-              <div className="h-[250px] mb-5 bg-[url('./mobile_app_development.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                   Mobile App Development
@@ -46,7 +46,7 @@ const Courses = () => {
 
             <Link to='/development/software-development-course'>
             <div className="cursor-pointer group">
-              <div className="h-[250px] mb-5 bg-[url('./software_development.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+              <div className="h-[250px] mb-5 bg-[url('https://assets.rbl.ms/25591710/origin.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
               <div className="p-2">
                 <h2 className="text-2xl font-bold text-gray-600">
                   Software Development
