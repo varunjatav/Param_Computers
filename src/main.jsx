@@ -67,6 +67,13 @@ import PythonOverview from './courses/Programming/Python/PythonOverview.jsx'
 import PythonSyllabus from './courses/Programming/Python/PythonSyllabus.jsx'
 import PythonInstructor from './courses/Programming/Python/PythonInstructor.jsx'
 
+//! Payment
+import Payment from './components/Payment/Payment.jsx'
+import Paypal from './components/Payment/Paypal.jsx'
+import Phonepe from './components/Payment/Phonepe.jsx'
+import Googlepay from './components/Payment/Googlepay.jsx'
+import Paytm from './components/Payment/Paytm.jsx'
+
 const router = createBrowserRouter([{
   path: "/",
   element: <App/>,
@@ -255,6 +262,28 @@ const router = createBrowserRouter([{
       }
     ]
   },
+  {
+    path:"/payment",
+    element: <Payment/>,
+    children:[
+      {
+        path:"paypal", 
+        element:<Paypal/>
+      },
+      {
+        path:"googlepay", 
+        element:<Googlepay/>
+      },
+      {
+        path:"phonepe", 
+        element:<Phonepe/>
+      },
+      {
+        path:"paytm", 
+        element:<Paytm/>
+      }
+    ]
+  }
   ]
 }])
 ReactDOM.createRoot(document.getElementById('root')).render(
