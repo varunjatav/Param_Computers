@@ -1,15 +1,51 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import axios from "axios";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const Payment = () => {
+  const [orderId, setOrderId] = useState("");
+  const [orderAmount, setOrderAmount] = useState("");
+  const [customerDetails, setCustomerDetails] = useState({
+    customer_id: "",
+    customer_email: "",
+    customer_phone: "",
+  });
+
+  const handlePayment = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:3001/create-order", {
+        order_id: orderId,
+        order_amount: orderAmount,
+        order_currency: "INR",
+        customer_details: customerDetails,
+      });
+
+      const { payment_link } = response.data;
+      console.log(response.data);
+      if (payment_link) {
+        window.location.href = payment_link;
+      } else {
+        console.error('No payment link received:', response.data);
+      }
+    } catch (error) {
+      console.error("Payment failed:", error);
+    }
+  };
+
   return (
+   
     <section className="grid grid-cols-2">
       <section className="p-10 border-r">
         <h2 className="font-bold text-lg uppercase">
           Choose the payment method
         </h2>
         <div className="flex flex-wrap py-4 justify-between">
-          <Link to="paypal" className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500">
+          <Link
+            to="paypal"
+            className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500"
+          >
             <img
               src="https://cdn.freelogovectors.net/wp-content/uploads/2023/08/paypallogo-freelogovectors.net_-180x133.png"
               alt="paypal"
@@ -18,7 +54,10 @@ const Payment = () => {
               loading="lazy"
             />
           </Link>
-          <Link to="googlepay" className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500">
+          <Link
+            to="googlepay"
+            className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500"
+          >
             <img
               src="https://download.logo.wine/logo/Google_Pay/Google_Pay-Logo.wine.png"
               alt="googlepay"
@@ -27,7 +66,10 @@ const Payment = () => {
               loading="lazy"
             />
           </Link>
-          <Link to="phonepe" className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500">
+          <Link
+            to="phonepe"
+            className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500"
+          >
             <img
               src="https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png"
               alt="phonepe"
@@ -36,7 +78,10 @@ const Payment = () => {
               loading="lazy"
             />
           </Link>
-          <Link to="paytm" className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500">
+          <Link
+            to="paytm"
+            className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500"
+          >
             <img
               src="https://download.logo.wine/logo/Paytm/Paytm-Logo.wine.png"
               alt="paytm"
@@ -47,28 +92,60 @@ const Payment = () => {
         </div>
         <div>
           <h2 className="font-bold text-lg uppercase">Your Information</h2>
-          <form action="" className="p-2">
+          <form action="" className="p-2 flex flex-col gap-5">
             <input
-              type="email"
-              placeholder="Email Address"
+              type="text"
+              placeholder="OrderId"
+              value={orderId}
+              onChange={(e) => setOrderId(e.target.value)}
               className="w-full rounded-xl p-2 border-2 border-black"
             />
-            <div className="grid grid-cols-2 gap-2 mt-5">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="w-full rounded-xl p-2 border-2 border-black"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="w-full rounded-xl p-2 border-2 border-black"
-              />
-            </div>
+
+            <input
+              type="text"
+              placeholder="Order Amount"
+              value={orderAmount}
+              onChange={(e) => setOrderAmount(e.target.value)}
+              className="w-full rounded-xl p-2 border-2 border-black"
+            />
+            <input
+              type="text"
+              placeholder="Customer ID"
+              value={customerDetails.customer_id}
+              onChange={(e) =>
+                setCustomerDetails({
+                  ...customerDetails,
+                  customer_id: e.target.value,
+                })
+              }
+              className="w-full rounded-xl p-2 border-2 border-black"
+            />
+            <input
+              type="email"
+              placeholder="Customer Email"
+              value={customerDetails.customer_email}
+              onChange={(e) =>
+                setCustomerDetails({
+                  ...customerDetails,
+                  customer_email: e.target.value,
+                })
+              }
+              className="w-full rounded-xl p-2 border-2 border-black"
+            />
+            <input
+              type="text"
+              placeholder="Customer Phone"
+              value={customerDetails.customer_phone}
+              onChange={(e) =>
+                setCustomerDetails({
+                  ...customerDetails,
+                  customer_phone: e.target.value,
+                })
+              }
+              className="w-full rounded-xl p-2 border-2 border-black"
+            />
+            <button onClick={handlePayment}>Pay Now</button>
           </form>
-        </div>
-        <div>
-           <Outlet/>
         </div>
       </section>
       <section className="p-10">
@@ -90,6 +167,7 @@ const Payment = () => {
         </div>
       </section>
     </section>
+  
   );
 };
 

@@ -73,6 +73,7 @@ import Paypal from './components/Payment/Paypal.jsx'
 import Phonepe from './components/Payment/Phonepe.jsx'
 import Googlepay from './components/Payment/Googlepay.jsx'
 import Paytm from './components/Payment/Paytm.jsx'
+import { ErrorBoundary } from './components/ErrorBoundary.jsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -288,6 +289,8 @@ const router = createBrowserRouter([{
 }])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ErrorBoundary>
     <RouterProvider router={router} />
+    </ErrorBoundary>
   </React.StrictMode>,
 )
