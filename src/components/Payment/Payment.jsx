@@ -1,152 +1,94 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { load } from "@cashfreepayments/cashfree-js";
 
 const Payment = () => {
-  const [orderId, setOrderId] = useState("");
-  const [orderAmount, setOrderAmount] = useState("");
-  const [customerDetails, setCustomerDetails] = useState({
-    customer_id: "",
-    customer_email: "",
-    customer_phone: "",
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
+  console.log(name);
+  console.log(email);
+  console.log(phoneNo);
+  const cashfree = Cashfree({
+    mode: "sandbox", //or production
   });
+
+  let options = {
+    values: {
+      upiId: "testsuccess@gocash",
+    },
+  };
+  let component = cashfree.create("upiCollect", options);
+
+  component.mount("#my-div");
 
   const handlePayment = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/create-order", {
-        order_id: orderId,
-        order_amount: orderAmount,
-        order_currency: "INR",
-        customer_details: customerDetails,
+      const response = await axios.post("http://localhost:3001/register", {
+        name: name,
+        email: email,
+        phoneNo: phoneNo,
       });
-
-      const { payment_link } = response.data;
-      console.log(response.data);
-      if (payment_link) {
-        window.location.href = payment_link;
-      } else {
-        console.error('No payment link received:', response.data);
+      console.log(response);
+      if (response.status === 200) {
+        cashfree.checkout({
+          paymentSessionId:
+            "session_tRErUdtZlfLeOJn8Yyr2SqkOcMP05yyOAGabiK6ViSTwaaecrtNct8TStZPo7d1B_JpZuvZhqiAbnTQ8Z8dL93aYsBsTYuVYabPMiVnDNTLB",
+        });
       }
     } catch (error) {
       console.error("Payment failed:", error);
     }
   };
 
+  const handleChange = (e) => {
+    if (e.target.name === "name") setName(e.target.value);
+    if (e.target.name === "email") setEmail(e.target.value);
+    if (e.target.name === "phoneNo") setPhoneNo(e.target.value);
+  };
   return (
-   
     <section className="grid grid-cols-2">
       <section className="p-10 border-r">
-        <h2 className="font-bold text-lg uppercase">
-          Choose the payment method
-        </h2>
-        <div className="flex flex-wrap py-4 justify-between">
-          <Link
-            to="paypal"
-            className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500"
-          >
-            <img
-              src="https://cdn.freelogovectors.net/wp-content/uploads/2023/08/paypallogo-freelogovectors.net_-180x133.png"
-              alt="paypal"
-              width={"100px"}
-              height={"100px"}
-              loading="lazy"
-            />
-          </Link>
-          <Link
-            to="googlepay"
-            className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500"
-          >
-            <img
-              src="https://download.logo.wine/logo/Google_Pay/Google_Pay-Logo.wine.png"
-              alt="googlepay"
-              width={"100px"}
-              height={"100px"}
-              loading="lazy"
-            />
-          </Link>
-          <Link
-            to="phonepe"
-            className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500"
-          >
-            <img
-              src="https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png"
-              alt="phonepe"
-              width={"100px"}
-              height={"100px"}
-              loading="lazy"
-            />
-          </Link>
-          <Link
-            to="paytm"
-            className="active:border-b-2 active:border-blue-500 focus:border-b-2 focus:border-blue-500"
-          >
-            <img
-              src="https://download.logo.wine/logo/Paytm/Paytm-Logo.wine.png"
-              alt="paytm"
-              width={"100px"}
-              height={"100px"}
-            />
-          </Link>
-        </div>
-        <div>
-          <h2 className="font-bold text-lg uppercase">Your Information</h2>
-          <form action="" className="p-2 flex flex-col gap-5">
-            <input
-              type="text"
-              placeholder="OrderId"
-              value={orderId}
-              onChange={(e) => setOrderId(e.target.value)}
-              className="w-full rounded-xl p-2 border-2 border-black"
-            />
-
-            <input
-              type="text"
-              placeholder="Order Amount"
-              value={orderAmount}
-              onChange={(e) => setOrderAmount(e.target.value)}
-              className="w-full rounded-xl p-2 border-2 border-black"
-            />
-            <input
-              type="text"
-              placeholder="Customer ID"
-              value={customerDetails.customer_id}
-              onChange={(e) =>
-                setCustomerDetails({
-                  ...customerDetails,
-                  customer_id: e.target.value,
-                })
-              }
-              className="w-full rounded-xl p-2 border-2 border-black"
-            />
-            <input
-              type="email"
-              placeholder="Customer Email"
-              value={customerDetails.customer_email}
-              onChange={(e) =>
-                setCustomerDetails({
-                  ...customerDetails,
-                  customer_email: e.target.value,
-                })
-              }
-              className="w-full rounded-xl p-2 border-2 border-black"
-            />
-            <input
-              type="text"
-              placeholder="Customer Phone"
-              value={customerDetails.customer_phone}
-              onChange={(e) =>
-                setCustomerDetails({
-                  ...customerDetails,
-                  customer_phone: e.target.value,
-                })
-              }
-              className="w-full rounded-xl p-2 border-2 border-black"
-            />
-            <button onClick={handlePayment}>Pay Now</button>
-          </form>
-        </div>
+        <form action="" className="flex flex-col gap-3">
+          <label htmlFor="Name" className="font-bold">
+            Name :
+          </label>
+          <input
+            name="name"
+            type="text"
+            onChange={handleChange}
+            placeholder="Enter Your Name"
+            className="w-full border-2 border-black rounded-md p-2"
+          />
+          <label htmlFor="Email" className="font-bold">
+            Email Address :
+          </label>
+          <input
+            name="email"
+            type="email"
+            onChange={handleChange}
+            placeholder="Enter Your Email"
+            className="w-full border-2 border-black rounded-md p-2"
+          />
+          <label htmlFor="Mobile" className="font-bold">
+            Mobile No:
+          </label>
+          <input
+            name="phoneNo"
+            type="text"
+            onChange={handleChange}
+            placeholder="Enter Your Mobile Number"
+            className="w-full border-2 border-black rounded-md p-2"
+          />
+          <input
+            type="submit"
+            value="Pay"
+            onClick={handlePayment}
+            className=" bg-green-400 text-white py-2 px-4 rounded-md cursor-pointer"
+          />
+        </form>
       </section>
       <section className="p-10">
         <img
@@ -167,7 +109,6 @@ const Payment = () => {
         </div>
       </section>
     </section>
-  
   );
 };
 
