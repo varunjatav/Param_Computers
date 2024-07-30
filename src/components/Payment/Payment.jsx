@@ -1,94 +1,106 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { load } from "@cashfreepayments/cashfree-js";
+import React from "react";
+
+import { Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { registration } from "../../store/registrationSlice";
 
 const Payment = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
-  console.log(name);
-  console.log(email);
-  console.log(phoneNo);
-  const cashfree = Cashfree({
-    mode: "sandbox", //or production
-  });
+  const dispatch = useDispatch();
 
-  let options = {
-    values: {
-      upiId: "testsuccess@gocash",
-    },
-  };
-  let component = cashfree.create("upiCollect", options);
-
-  component.mount("#my-div");
-
-  const handlePayment = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post("http://localhost:3001/register", {
-        name: name,
-        email: email,
-        phoneNo: phoneNo,
-      });
-      console.log(response);
-      if (response.status === 200) {
-        cashfree.checkout({
-          paymentSessionId:
-            "session_tRErUdtZlfLeOJn8Yyr2SqkOcMP05yyOAGabiK6ViSTwaaecrtNct8TStZPo7d1B_JpZuvZhqiAbnTQ8Z8dL93aYsBsTYuVYabPMiVnDNTLB",
-        });
-      }
-    } catch (error) {
-      console.error("Payment failed:", error);
-    }
+  const handlePayment = async (values) => {
+    dispatch(registration(values));
+    values.name = "";
+    values.email = "";
+    values.phoneNo = "";
   };
 
-  const handleChange = (e) => {
-    if (e.target.name === "name") setName(e.target.value);
-    if (e.target.name === "email") setEmail(e.target.value);
-    if (e.target.name === "phoneNo") setPhoneNo(e.target.value);
-  };
   return (
     <section className="grid grid-cols-2">
       <section className="p-10 border-r">
-        <form action="" className="flex flex-col gap-3">
-          <label htmlFor="Name" className="font-bold">
-            Name :
-          </label>
-          <input
-            name="name"
-            type="text"
-            onChange={handleChange}
-            placeholder="Enter Your Name"
-            className="w-full border-2 border-black rounded-md p-2"
-          />
-          <label htmlFor="Email" className="font-bold">
-            Email Address :
-          </label>
-          <input
-            name="email"
-            type="email"
-            onChange={handleChange}
-            placeholder="Enter Your Email"
-            className="w-full border-2 border-black rounded-md p-2"
-          />
-          <label htmlFor="Mobile" className="font-bold">
-            Mobile No:
-          </label>
-          <input
-            name="phoneNo"
-            type="text"
-            onChange={handleChange}
-            placeholder="Enter Your Mobile Number"
-            className="w-full border-2 border-black rounded-md p-2"
-          />
-          <input
-            type="submit"
-            value="Pay"
-            onClick={handlePayment}
-            className=" bg-green-400 text-white py-2 px-4 rounded-md cursor-pointer"
-          />
-        </form>
+        <Formik
+          initialValues={{ name: "", email: "", phoneNo: "" }}
+          validate={(values) => {
+            const errors = {};
+            if (!values.email) {
+              errors.email = "Email is Required";
+            } 
+            if (!values.name) {
+              errors.name = "Name is required";
+            } 
+            if (!values.phoneNo) {
+              errors.phoneNo = "Contact is required";
+            } 
+            return errors;
+          }}
+          onSubmit={(values, { setSubmitting }) => {
+            // console.log(values);
+            handlePayment(values);
+          }}
+        >
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            isSubmitting,
+            /* and other goodies */
+          }) => (
+            <form
+              action=""
+              className="flex flex-col gap-3"
+              onSubmit={handleSubmit}
+            >
+              <label htmlFor="Name" className="font-bold">
+                Name :
+              </label>
+              <input
+                name="name"
+                type="text"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+                placeholder="Enter Your Name"
+                className="w-full border-2 border-black rounded-md p-2"
+              />
+              {errors.name && touched.name && errors.name}
+              <label htmlFor="Email" className="font-bold">
+                Email Address :
+              </label>
+              <input
+                name="email"
+                type="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+                placeholder="Enter Your Email"
+                className="w-full border-2 border-black rounded-md p-2"
+              />
+              {errors.email && touched.email && errors.email}
+              <label htmlFor="Mobile" className="font-bold">
+                Mobile No:
+              </label>
+              <input
+                name="phoneNo"
+                type="text"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.phondeNo}
+                placeholder="Enter Your Mobile Number"
+                className="w-full border-2 border-black rounded-md p-2"
+              />
+              {errors.phoneNo && touched.phoneNo && errors.phoneNo}
+              <input
+                type="submit"
+                value="Pay"
+                disabled={isSubmitting}
+                className=" bg-green-400 text-white py-2 px-4 rounded-md cursor-pointer"
+              />
+            </form>
+          )}
+        </Formik>
       </section>
       <section className="p-10">
         <img
