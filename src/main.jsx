@@ -68,13 +68,14 @@ import PythonSyllabus from './courses/Programming/Python/PythonSyllabus.jsx'
 import PythonInstructor from './courses/Programming/Python/PythonInstructor.jsx'
 
 //! Payment
-import Payment from './components/Payment/Payment.jsx'
+import WebPayment from './components/Payment/WebPayment.jsx'
 
 import { ErrorBoundary } from './components/ErrorBoundary.jsx'
 
 // ! store redux toolkit
 import { Provider } from 'react-redux'
 import paramStore from './store/paramStore.js'
+import AppPayment from './components/Payment/AppPayment.jsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -117,6 +118,10 @@ const router = createBrowserRouter([{
       {
         path: "instructor",
         element: <WebInstructor/>
+      },
+      {
+        path:"payment",
+        element: <WebPayment/>,
       }
     ]
   },
@@ -265,8 +270,12 @@ const router = createBrowserRouter([{
     ]
   },
   {
-    path:"/payment",
-    element: <Payment/>,
+    path:"/web-development-payment",
+    element: <WebPayment/>,
+  },
+  {
+    path:"/app-development-payment",
+    element: <AppPayment/>,
   }
   ]
 }])

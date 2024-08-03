@@ -14,23 +14,22 @@ async(values, thunkAPI) => {
     },
   };
   let component = cashfree.create("upiCollect", options);
-
+console.log(values);
   component.mount("#my-div");
-
-    console.log(values);
     try {
       const response = await axios.post("http://localhost:3001/registration", {
         name: values.name,
         email: values.email,
         phoneNo: values.phoneNo,
+        course: values.course
       });
-      console.log(response);
-      if (response.status === 201) {
-        cashfree.checkout({
-          paymentSessionId:
-            "session_tRErUdtZlfLeOJn8Yyr2SqkOcMP05yyOAGabiK6ViSTwaaecrtNct8TStZPo7d1B_JpZuvZhqiAbnTQ8Z8dL93aYsBsTYuVYabPMiVnDNTLB",
-        });
-      }
+      console.log(response.data);
+      // if (response.status === 201) {
+      //   cashfree.checkout({
+      //     paymentSessionId:
+      //       "session_tRErUdtZlfLeOJn8Yyr2SqkOcMP05yyOAGabiK6ViSTwaaecrtNct8TStZPo7d1B_JpZuvZhqiAbnTQ8Z8dL93aYsBsTYuVYabPMiVnDNTLB",
+      //   });
+      // }
     } catch (error) {
       console.error("Payment failed:", error);
     }

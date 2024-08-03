@@ -1,25 +1,23 @@
-import axios from "axios";
 import React from "react";
-
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { registration } from "../../store/registrationSlice";
 
-const Payment = () => {
+const WebPayment = () => {
   const dispatch = useDispatch();
 
-  const handlePayment = async (values) => {
+  const handlePayment = (values) => {
+  
     dispatch(registration(values));
-    values.name = "";
-    values.email = "";
-    values.phoneNo = "";
+  
+    console.log(values);
   };
 
   return (
     <section className="grid grid-cols-2">
       <section className="p-10 border-r">
         <Formik
-          initialValues={{ name: "", email: "", phoneNo: "" }}
+          initialValues={{ name: "", email: "", phoneNo: "" , course:"Web Developement" }}
           validate={(values) => {
             const errors = {};
             if (!values.email) {
@@ -124,4 +122,4 @@ const Payment = () => {
   );
 };
 
-export default Payment;
+export default WebPayment;
