@@ -17,7 +17,7 @@ const AppPayment = () => {
     <section className="grid grid-cols-2">
       <section className="p-10 border-r">
         <Formik
-          initialValues={{ name: "", email: "", phoneNo: "" , course:"Mobile App Developement" }}
+          initialValues={{ name: "", email: "", phoneNo: "" , course:"Mobile App Developement", section:"Development and Database" }}
           validate={(values) => {
             const errors = {};
             if (!values.email) {

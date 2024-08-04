@@ -27,12 +27,12 @@ const SoftwareDevelopment = () => {
         <p className="font-bold text-2xl text-emerald-700 pb-5">
           &#8377; 14000
         </p>
-        <button
+        <Link to={"/software-development-payment"}
           type="button"
           class="text-white w-full bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 "
         >
           Register Now
-        </button>
+        </Link>
       </aside>
 
       <section className="flex-initial w-full lg:w-[800px]">

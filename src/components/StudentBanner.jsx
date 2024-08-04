@@ -22,7 +22,7 @@ const StudentBanner = () => {
             webinars, and structured guidance, aiming to brighten your career in
             the software industry. Param Computers offers top-notch programming
             classes in Jhansi, emphasizing practical learning and IT expertise.
-            Their advanced courses cater to individuals at all skill levels. If
+            Thier advanced courses cater to individuals at all skill levels. If
             you're looking to elevate your programming skills, Param Computers
             is the perfect choice, offering comprehensive and dynamic education.
           </p>

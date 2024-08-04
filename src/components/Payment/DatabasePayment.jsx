@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { registration } from "../../store/registrationSlice";
 
-const WebPayment = () => {
-  const dispatch = useDispatch();
+const DatabasePayment = () => {
+    const dispatch = useDispatch();
 
   const handlePayment = (values) => {
   
@@ -17,7 +17,7 @@ const WebPayment = () => {
     <section className="grid grid-cols-2">
       <section className="p-10 border-r">
         <Formik
-          initialValues={{ name: "", email: "", phoneNo: "" , course:"Web Developement", section:"Development and Database" }}
+          initialValues={{ name: "", email: "", phoneNo: "" , course:"Database Management System", section:"Development and Database"}}
           validate={(values) => {
             const errors = {};
             if (!values.email) {
@@ -63,7 +63,7 @@ const WebPayment = () => {
                 placeholder="Enter Your Name"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-              {errors.name && touched.name && errors.name}
+               <p className='text-red-500 font-semibold text-sm'>{errors.name && touched.name && errors.name}</p> 
               <label htmlFor="Email" className="font-bold">
                 Email Address :
               </label>
@@ -76,7 +76,7 @@ const WebPayment = () => {
                 placeholder="Enter Your Email"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-              {errors.email && touched.email && errors.email}
+              <p className='text-red-500 font-semibold text-sm'>{errors.email && touched.email && errors.email}</p> 
               <label htmlFor="Mobile" className="font-bold">
                 Mobile No:
               </label>
@@ -85,11 +85,11 @@ const WebPayment = () => {
                 type="text"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.phondeNo}
+                value={values.phoneNo}
                 placeholder="Enter Your Mobile Number"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-              {errors.phoneNo && touched.phoneNo && errors.phoneNo}
+               <p className='text-red-500 font-semibold text-sm'>{errors.phoneNo && touched.phoneNo && errors.phoneNo}</p> 
               <input
                 type="submit"
                 value="Pay"
@@ -119,7 +119,7 @@ const WebPayment = () => {
         </div>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default WebPayment;
+export default DatabasePayment
