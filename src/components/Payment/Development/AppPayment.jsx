@@ -1,23 +1,24 @@
-import React from 'react';
+import React from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { registration } from "../../store/registrationSlice";
+import { registration } from "../../../store/registrationSlice";
+// import { registration } from "../../../../store/registrationSlice";
 
-const DatabasePayment = () => {
-    const dispatch = useDispatch();
+const AppPayment = () => {
+  const dispatch = useDispatch();
 
-  const handlePayment = (values) => {
-  
+  const handlePayment = async (values) => {
     dispatch(registration(values));
-  
-    console.log(values);
+    values.name = "";
+    values.email = "";
+    values.phoneNo = "";
   };
 
   return (
     <section className="grid grid-cols-2">
       <section className="p-10 border-r">
         <Formik
-          initialValues={{ name: "", email: "", phoneNo: "" , course:"Database Management System", section:"Development and Database"}}
+          initialValues={{ name: "", email: "", phoneNo: "" , course:"Mobile App Developement", section:"Development and Database" }}
           validate={(values) => {
             const errors = {};
             if (!values.email) {
@@ -63,7 +64,7 @@ const DatabasePayment = () => {
                 placeholder="Enter Your Name"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-               <p className='text-red-500 font-semibold text-sm'>{errors.name && touched.name && errors.name}</p> 
+              {errors.name && touched.name && errors.name}
               <label htmlFor="Email" className="font-bold">
                 Email Address :
               </label>
@@ -76,7 +77,7 @@ const DatabasePayment = () => {
                 placeholder="Enter Your Email"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-              <p className='text-red-500 font-semibold text-sm'>{errors.email && touched.email && errors.email}</p> 
+              {errors.email && touched.email && errors.email}
               <label htmlFor="Mobile" className="font-bold">
                 Mobile No:
               </label>
@@ -85,11 +86,12 @@ const DatabasePayment = () => {
                 type="text"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.phoneNo}
+                value={values.phondeNo}
                 placeholder="Enter Your Mobile Number"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-               <p className='text-red-500 font-semibold text-sm'>{errors.phoneNo && touched.phoneNo && errors.phoneNo}</p> 
+              {errors.phoneNo && touched.phoneNo && errors.phoneNo}
+             
               <input
                 type="submit"
                 value="Pay"
@@ -119,7 +121,7 @@ const DatabasePayment = () => {
         </div>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default DatabasePayment
+export default AppPayment;

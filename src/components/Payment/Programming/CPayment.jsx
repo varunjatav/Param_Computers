@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { registration } from "../../store/registrationSlice";
+import { registration } from '../../../store/registrationSlice';
 
-const SoftwarePayment = () => {
-  
+
+const CPayment = () => {
     const dispatch = useDispatch();
 
     const handlePayment = (values) => {
@@ -18,7 +18,7 @@ const SoftwarePayment = () => {
       <section className="grid grid-cols-2">
         <section className="p-10 border-r">
           <Formik
-            initialValues={{ name: "", email: "", phoneNo: "" , course:"Software Developement", section:"Development and Database"}}
+            initialValues={{ name: "", email: "", phoneNo: "" , course:"Mastering C Programming", section:"Programming For Everyone" }}
             validate={(values) => {
               const errors = {};
               if (!values.email) {
@@ -120,7 +120,7 @@ const SoftwarePayment = () => {
           </div>
         </section>
       </section>
-  )
+    )
 }
 
-export default SoftwarePayment
+export default CPayment

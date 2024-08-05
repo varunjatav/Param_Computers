@@ -1,10 +1,11 @@
 import React from 'react';
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { registration } from "../../store/registrationSlice";
+import { registration } from '../../../store/registrationSlice';
 
-const ExcelPayment = () => {
-   const dispatch = useDispatch();
+
+const DatabasePayment = () => {
+    const dispatch = useDispatch();
 
   const handlePayment = (values) => {
   
@@ -14,10 +15,10 @@ const ExcelPayment = () => {
   };
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2">
+    <section className="grid grid-cols-2">
       <section className="p-10 border-r">
         <Formik
-          initialValues={{ name: "", email: "", phoneNo: "" , course:"Advance Excel", section:"Development and Database"}}
+          initialValues={{ name: "", email: "", phoneNo: "" , course:"Database Management System", section:"Development and Database"}}
           validate={(values) => {
             const errors = {};
             if (!values.email) {
@@ -63,7 +64,7 @@ const ExcelPayment = () => {
                 placeholder="Enter Your Name"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-             <p className='text-red-500 font-semibold text-sm'>{errors.name && touched.name && errors.name}</p> 
+               <p className='text-red-500 font-semibold text-sm'>{errors.name && touched.name && errors.name}</p> 
               <label htmlFor="Email" className="font-bold">
                 Email Address :
               </label>
@@ -76,7 +77,7 @@ const ExcelPayment = () => {
                 placeholder="Enter Your Email"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-             <p className='text-red-500 font-semibold text-sm'>{errors.email && touched.email && errors.email}</p> 
+              <p className='text-red-500 font-semibold text-sm'>{errors.email && touched.email && errors.email}</p> 
               <label htmlFor="Mobile" className="font-bold">
                 Mobile No:
               </label>
@@ -85,11 +86,11 @@ const ExcelPayment = () => {
                 type="text"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.phondeNo}
+                value={values.phoneNo}
                 placeholder="Enter Your Mobile Number"
                 className="w-full border-2 border-black rounded-md p-2"
               />
-              <p className='text-red-500 font-semibold text-sm'>{errors.phoneNo && touched.phoneNo && errors.phoneNo}</p> 
+               <p className='text-red-500 font-semibold text-sm'>{errors.phoneNo && touched.phoneNo && errors.phoneNo}</p> 
               <input
                 type="submit"
                 value="Pay"
@@ -122,4 +123,4 @@ const ExcelPayment = () => {
   )
 }
 
-export default ExcelPayment;
+export default DatabasePayment

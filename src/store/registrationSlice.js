@@ -25,12 +25,12 @@ console.log(values);
         section: values.section,
       });
       console.log(response.data);
-        // if (response.status === 201) {
-        //   cashfree.checkout({
-        //     paymentSessionId:
-        //       "session_tRErUdtZlfLeOJn8Yyr2SqkOcMP05yyOAGabiK6ViSTwaaecrtNct8TStZPo7d1B_JpZuvZhqiAbnTQ8Z8dL93aYsBsTYuVYabPMiVnDNTLB",
-        //   });
-        // }
+        if (response.status === 201) {
+          cashfree.checkout({
+            paymentSessionId:
+              "session_tRErUdtZlfLeOJn8Yyr2SqkOcMP05yyOAGabiK6ViSTwaaecrtNct8TStZPo7d1B_JpZuvZhqiAbnTQ8Z8dL93aYsBsTYuVYabPMiVnDNTLB",
+          });
+        }
     } catch (error) {
       console.error("Payment failed:", error);
     }

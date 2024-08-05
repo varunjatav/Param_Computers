@@ -68,17 +68,21 @@ import PythonSyllabus from './courses/Programming/Python/PythonSyllabus.jsx';
 import PythonInstructor from './courses/Programming/Python/PythonInstructor.jsx';
 
 //! Payment
-import WebPayment from './components/Payment/WebPayment.jsx';
-import AppPayment from './components/Payment/AppPayment.jsx';
-import SoftwarePayment from './components/Payment/SoftwarePayment.jsx';
-import DigitalPayment from './components/Payment/DigitalPayment.jsx';
-import ExcelPayment from './components/Payment/ExcelPayment.jsx';
-import DatabasePayment from './components/Payment/DatabasePayment.jsx';
+import WebPayment from './components/Payment/Development/WebPayment.jsx';
+import AppPayment from './components/Payment/Development/AppPayment.jsx';
+import SoftwarePayment from './components/Payment/Development/SoftwarePayment.jsx';
+import DigitalPayment from './components/Payment/Development/DigitalPayment.jsx';
+import ExcelPayment from './components/Payment/Development/ExcelPayment.jsx';
+import DatabasePayment from './components/Payment/Development/DatabasePayment.jsx';
+import JavaPayment from "./components/Payment/Programming/JavaPayment.jsx"
 import { ErrorBoundary } from './components/ErrorBoundary.jsx';
 
 // ! store redux toolkit
 import { Provider } from 'react-redux';
 import paramStore from './store/paramStore.js';
+import CPayment from './components/Payment/Programming/CPayment.jsx';
+import CPlusPayment from './components/Payment/Programming/CPlusPayment.jsx';
+import PythonPayment from './components/Payment/Programming/PythonPayment.jsx';
 
 
 
@@ -276,28 +280,44 @@ const router = createBrowserRouter([{
     ]
   },
   {
-    path:"/web-development-payment",
+    path:"/development/web-development-payment",
     element: <WebPayment/>,
   },
   {
-    path:"/app-development-payment",
+    path:"/development/app-development-payment",
     element: <AppPayment/>,
   },
   {
-    path: "/software-development-payment",
+    path: "/development/software-development-payment",
     element: <SoftwarePayment/>
   },
   {
-    path: "/digital-marketing-payment",
+    path: "/development/digital-marketing-payment",
     element: <DigitalPayment/>
   },
   {
-    path: "/advance-excel-payment",
+    path: "/development/advance-excel-payment",
     element: <ExcelPayment/>
   },
   {
-    path: "/database-payment",
+    path: "/development/database-payment",
     element: <DatabasePayment/>
+  },
+  {
+    path:"/programming/java-payment",
+    element: <JavaPayment/>
+  },
+  {
+    path:"/programming/c-payment",
+    element: <CPayment/>
+  },
+  {
+    path:"/programming/c++-payment",
+    element: <CPlusPayment/>
+  },
+  {
+    path:"/programming/python-payment",
+    element: <PythonPayment/>
   }
   ]
 }])

@@ -1,23 +1,23 @@
 import React from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { registration } from "../../store/registrationSlice";
+import { registration } from "../../../store/registrationSlice";
 
-const AppPayment = () => {
+const WebPayment = () => {
   const dispatch = useDispatch();
 
-  const handlePayment = async (values) => {
+  const handlePayment = (values) => {
+  
     dispatch(registration(values));
-    values.name = "";
-    values.email = "";
-    values.phoneNo = "";
+  
+    console.log(values);
   };
 
   return (
     <section className="grid grid-cols-2">
       <section className="p-10 border-r">
         <Formik
-          initialValues={{ name: "", email: "", phoneNo: "" , course:"Mobile App Developement", section:"Development and Database" }}
+          initialValues={{ name: "", email: "", phoneNo: "" , course:"Web Developement", section:"Development and Database" }}
           validate={(values) => {
             const errors = {};
             if (!values.email) {
@@ -90,7 +90,6 @@ const AppPayment = () => {
                 className="w-full border-2 border-black rounded-md p-2"
               />
               {errors.phoneNo && touched.phoneNo && errors.phoneNo}
-             
               <input
                 type="submit"
                 value="Pay"
@@ -123,4 +122,4 @@ const AppPayment = () => {
   );
 };
 
-export default AppPayment;
+export default WebPayment;

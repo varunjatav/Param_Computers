@@ -1,9 +1,9 @@
 import React from 'react';
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { registration } from "../../store/registrationSlice";
+import { registration } from '../../../store/registrationSlice';
 
-const DigitalPayment = () => {
+const JavaPayment = () => {
     const dispatch = useDispatch();
 
     const handlePayment = (values) => {
@@ -17,7 +17,7 @@ const DigitalPayment = () => {
       <section className="grid grid-cols-2">
         <section className="p-10 border-r">
           <Formik
-            initialValues={{ name: "", email: "", phoneNo: "" , course:"Digital Marketing", section:"Development and Database"}}
+            initialValues={{ name: "", email: "", phoneNo: "" , course:"Core Java", section:"Programming For Everyone" }}
             validate={(values) => {
               const errors = {};
               if (!values.email) {
@@ -63,7 +63,7 @@ const DigitalPayment = () => {
                   placeholder="Enter Your Name"
                   className="w-full border-2 border-black rounded-md p-2"
                 />
-                <p className='text-red-500 font-semibold text-sm'>{errors.name && touched.name && errors.name} </p> 
+                {errors.name && touched.name && errors.name}
                 <label htmlFor="Email" className="font-bold">
                   Email Address :
                 </label>
@@ -76,7 +76,7 @@ const DigitalPayment = () => {
                   placeholder="Enter Your Email"
                   className="w-full border-2 border-black rounded-md p-2"
                 />
-                  <p className='text-red-500 font-semibold text-sm'>{errors.email && touched.email && errors.email}</p> 
+                {errors.email && touched.email && errors.email}
                 <label htmlFor="Mobile" className="font-bold">
                   Mobile No:
                 </label>
@@ -89,7 +89,7 @@ const DigitalPayment = () => {
                   placeholder="Enter Your Mobile Number"
                   className="w-full border-2 border-black rounded-md p-2"
                 />
-                  <p className='text-red-500 font-semibold text-sm'>{errors.phoneNo && touched.phoneNo && errors.phoneNo}</p> 
+                {errors.phoneNo && touched.phoneNo && errors.phoneNo}
                 <input
                   type="submit"
                   value="Pay"
@@ -119,7 +119,7 @@ const DigitalPayment = () => {
           </div>
         </section>
       </section>
-  )
+    )
 }
 
-export default DigitalPayment;
+export default JavaPayment
