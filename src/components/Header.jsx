@@ -22,9 +22,9 @@ const Header = () => {
         <Link to="/" className="font-semibold text-xl">
           Home
         </Link>
-        <h2 className="font-semibold text-xl">About</h2>
-        <h2 className="font-semibold text-xl">Courses</h2>
-        <h2 className="font-semibold text-xl">Contact</h2>
+        <a href="#about" className="font-semibold text-xl">About</a>
+        <a href="#courses" className="font-semibold text-xl">Courses</a>
+        <a href="#contact" className="font-semibold text-xl">Contact</a>
       </section>
     </header>
   );

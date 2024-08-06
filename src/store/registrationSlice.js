@@ -17,7 +17,7 @@ async(values, thunkAPI) => {
 console.log(values);
   component.mount("#my-div");
     try {
-      const response = await axios.post("http://localhost:3001/registration", {
+      const response = await axios.post("https://param-backend.onrender.com/registration", {
         name: values.name,
         email: values.email,
         phoneNo: values.phoneNo,

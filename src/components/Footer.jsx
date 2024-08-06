@@ -4,7 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
 const Footer = () => {
   return (
-    <footer className="mt-10">
+    <footer id="contact" className="mt-10">
       <div className="flex justify-between items-center p-10 flex-col lg:flex-row">
         <section>
           <img
@@ -19,15 +19,15 @@ const Footer = () => {
         <section>
           <h2 className="text-2xl font-bold font-mono">Connect with us</h2>
           <section className="flex flex-col items-center justify-between mt-5">
-            <a href="#" className="flex items-center gap-2">
+            <a href="whatsapp:contact=7355522487"className="flex items-center gap-2">
               <FaWhatsapp className="text-xl text-green-600" />{" "}
               <span className="font-semibold">+91 735 5522487</span>
             </a>
-            <a href="#" className="flex items-center gap-2">
+            <a href="tel:+91 6386283480" className="flex items-center gap-2">
               <IoIosCall className="text-xl" />{" "}
               <span className="font-semibold">+91 6386283480</span>
             </a>
-            <a href="#" className="flex items-center gap-2">
+            <a href="mailto:info@paramcomputers.co.in" className="flex items-center gap-2">
               <MdOutlineEmail className="text-xl text-red-600" />{" "}
               <span className="font-semibold italic">
                 info@paramcomputers.co.in

@@ -55,7 +55,7 @@ const Slider = () => {
     cursor: 'pointer'
   };
   return (
-<section>
+<section id="about">
     <center className="py-14">
     <h1 className="text-3xl uppercase font-semibold ">
       Get to <span className='text-teal-400'> Know Your </span> Mentors
