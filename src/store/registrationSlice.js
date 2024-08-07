@@ -14,21 +14,20 @@ async(values, thunkAPI) => {
     },
   };
   let component = cashfree.create("upiCollect", options);
-console.log(values);
+// console.log(values);
   component.mount("#my-div");
     try {
-      const response = await axios.post("https://param-backend.onrender.com/registration", {
+      const response = await axios.post("http://localhost:3001/registration", {
         name: values.name,
         email: values.email,
         phoneNo: values.phoneNo,
         course: values.course,
         section: values.section,
       });
-      console.log(response.data);
-        if (response.status === 201) {
+      
+        if (response.status === 201 && response.data.paymentSessionId) {
           cashfree.checkout({
-            paymentSessionId:
-              "session_tRErUdtZlfLeOJn8Yyr2SqkOcMP05yyOAGabiK6ViSTwaaecrtNct8TStZPo7d1B_JpZuvZhqiAbnTQ8Z8dL93aYsBsTYuVYabPMiVnDNTLB",
+            paymentSessionId: response.data.paymentSessionId,
           });
         }
     } catch (error) {
