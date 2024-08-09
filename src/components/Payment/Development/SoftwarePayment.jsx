@@ -108,7 +108,7 @@ const SoftwarePayment = () => {
             className="h-72 w-full rounded-ss-[100px] rounded-ee-[100px]"
           />
           <div className="p-2">
-            <h2 className="font-semibold text-5xl font-serif leading-normal">
+            <h2 className="font-semibold text-2xl md:text-5xl font-serif leading-normal">
               Discover new <span className="text-green-500"> learning</span>{" "}
               possibilities.
             </h2>

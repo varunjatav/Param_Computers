@@ -33,9 +33,9 @@ const Header = () => {
         <Link to="/" className="font-semibold text-xl">
           Home
         </Link>
-        <a href="#about" className="font-semibold text-xl">About</a>
-        <a href="#courses" className="font-semibold text-xl">Courses</a>
-        <a href="#contact" className="font-semibold text-xl">Contact</a>
+        <a href="/#about" className="font-semibold text-xl">About</a>
+        <a href="/#courses" className="font-semibold text-xl">Courses</a>
+        <a href="/#contact" className="font-semibold text-xl">Contact</a>
       </section>
     </header>
     <Sidebar/>
