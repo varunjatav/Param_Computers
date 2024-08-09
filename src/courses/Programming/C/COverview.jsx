@@ -3,8 +3,8 @@ import { TiTick } from "react-icons/ti";
 
 const COverview = () => {
   return (
-    <div className="py-10">
-      <h1 className="font-bold text-3xl mb-5">Description</h1>
+    <div className="px-4 py-10">
+      <h1 className="font-bold text-2xl md:text-3xl mb-5">Description</h1>
       <p>
         Embark on a journey of innovation and mastery with C at Param Computers.
         Whether you're a novice or seasoned coder, our institution offers a
@@ -17,7 +17,7 @@ const COverview = () => {
         a vibrant community dedicated to shaping the future through code. Enroll
         now and ignite your passion for C programming at Param Computers!
       </p>
-      <h1 className="font-bold text-3xl my-5">What you will master</h1>
+      <h1 className="font-bold text-2xl md:text-3xl my-5">What you will master</h1>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
           <TiTick /> Proficiency in C language syntax and semantics

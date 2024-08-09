@@ -7,7 +7,7 @@ import { Link, Outlet } from "react-router-dom";
 const WebDevelopment = () => {
   return (
     <section id="web_developement">
-      <div className="rounded-[40px]  bg-[url('https://static.vecteezy.com/system/resources/previews/000/271/024/non_2x/vector-web-development-web-banner.jpg')] bg-cover bg-no-repeat bg-center mx-10 h-80 "></div>
+      <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://static.vecteezy.com/system/resources/previews/000/271/024/non_2x/vector-web-development-web-banner.jpg"/>
       <div className="flex flex-col  justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-96 p-10">
         <h2 className="font-bold text-xl mb-2">Course Content</h2>

@@ -3,15 +3,15 @@ import { TiTick } from "react-icons/ti";
 
 const DigitalOverview = () => {
   return (
-    <div className="py-10">
-      <h1 className="font-bold text-3xl mb-5">Description</h1>
+    <div className="px-4 py-10">
+      <h1 className="font-bold text-2xl lg:text-3xl mb-5">Description</h1>
       <p>
         In today's digital age, understanding digital marketing is essential for
         professionals across all industries. This comprehensive course will
         equip you with the necessary skills and knowledge to navigate the
         ever-evolving digital landscape successfully.
       </p>
-      <h1 className="font-bold text-3xl my-5">What you will learn</h1>
+      <h1 className="font-bold text-2xl lg:text-3xl my-5">What you will learn</h1>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
           <TiTick /> Understand the fundamentals of digital marketing
@@ -29,7 +29,7 @@ const DigitalOverview = () => {
           <TiTick /> Stay ahead of the competition in the digital realm
         </li>
       </ul>
-      <h1 className="font-bold text-3xl my-5">What you will master</h1>
+      <h1 className="font-bold text-2xl lg:text-3xl my-5">What you will master</h1>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
           <TiTick /> Strategic thinking in digital marketing

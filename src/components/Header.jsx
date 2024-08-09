@@ -1,8 +1,19 @@
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import Sidebar from "./Aside.jsx";
+import { useDispatch, useSelector } from "react-redux";
+import { ToggleSliceActions } from "../store/sideBarToggleSlice.js";
 const Header = () => {
+
+
+  const dispatch = useDispatch();
+
+  const handleToggle = () => {
+    dispatch(ToggleSliceActions.setToggleSlice());
+  };
   return (
+    <>
     <header className="flex py-3 px-10 justify-between items-center">
       <section>
         <Link to="/">
@@ -15,10 +26,10 @@ const Header = () => {
         </Link>
       </section>
 
-      <section>
+      <button onClick={handleToggle}>
         <RxHamburgerMenu className="text-5xl block lg:hidden" />
-      </section>
-      <section className="gap-10 hidden lg:flex">
+      </button>
+      <section className={`gap-10 hidden lg:flex`}>
         <Link to="/" className="font-semibold text-xl">
           Home
         </Link>
@@ -27,6 +38,8 @@ const Header = () => {
         <a href="#contact" className="font-semibold text-xl">Contact</a>
       </section>
     </header>
+    <Sidebar/>
+    </>
   );
 };
 

@@ -14,7 +14,7 @@ const DigitalPayment = () => {
     };
   
     return (
-      <section className="grid grid-cols-2">
+      <section  className="grid grid-cols-1 md:grid-cols-2">
         <section className="p-10 border-r">
           <Formik
             initialValues={{ name: "", email: "", phoneNo: "" , course:"Digital Marketing", section:"Development and Database"}}

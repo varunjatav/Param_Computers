@@ -3,8 +3,8 @@ import { TiTick } from "react-icons/ti";
 
 const DatabaseOverview = () => {
   return (
-    <div className="py-10">
-      <h1 className="font-bold text-3xl mb-5">Description</h1>
+    <div className="px-4 py-10">
+      <h1 className="font-bold text-2xl lg:text-3xl mb-5">Description</h1>
       <p>
         Uncover the backbone of modern data-driven applications with Database
         Management Systems at Param Computers. Dive into the heart of
@@ -21,7 +21,7 @@ const DatabaseOverview = () => {
         become a proficient database administrator or developer. Enroll now and
         unlock the gateway to a rewarding career in the realm of data
       </p>
-      <h1 className="font-bold text-3xl my-5">What you will master</h1>
+      <h1 className="font-bold text-2xl lg:text-3xl my-5">What you will master</h1>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
           <TiTick /> MySQL

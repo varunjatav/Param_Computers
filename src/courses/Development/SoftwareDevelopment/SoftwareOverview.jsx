@@ -3,8 +3,8 @@ import { TiTick } from "react-icons/ti";
 
 const SoftwareOverview = () => {
   return (
-    <div className="pt-10">
-      <h1 className="font-bold text-3xl mb-5">Description</h1>
+    <div className="px-4 pt-10">
+      <h1 className="font-bold text-2xl lg:text-3xl mb-5">Description</h1>
       <p>
         Discover the power of crafting immersive digital experiences through web
         development at Param Computers. Whether you're drawn to the artistry of
@@ -21,7 +21,7 @@ const SoftwareOverview = () => {
         Computers. Enroll now and embark on a journey to become a proficient web
         developer
       </p>
-      <h1 className="font-bold text-3xl my-5">What you will master</h1>
+      <h1 className="font-bold text-2xl lg:text-3xl my-5">What you will master</h1>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
           <TiTick /> HTML

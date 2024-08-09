@@ -3,8 +3,8 @@ import { TiTick } from "react-icons/ti";
 
 const ExcelOverview = () => {
   return (
-    <div className="pt-10">
-      <h1 className="font-bold text-3xl mb-5">Description</h1>
+    <div className="px-4 pt-10">
+      <h1 className="font-bold text-2xl lg:text-3xl mb-5">Description</h1>
       <p>
         Master the art of data analysis and optimization with Advanced Excel
         courses at Param Computers. Dive deep into the powerful functionalities
@@ -21,7 +21,7 @@ const ExcelOverview = () => {
         for greater efficiency and success in your professional endeavors.
         Enroll now and unlock the limitless possibilities of Advanced Excel.
       </p>
-      <h1 className="font-bold text-3xl my-5">What you will master</h1>
+      <h1 className="font-bold text-2xl lg:text-3xl my-5">What you will master</h1>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
           <TiTick /> HTML

@@ -14,7 +14,7 @@ const WebPayment = () => {
   };
 
   return (
-    <section className="grid grid-cols-2">
+    <section className="grid grid-cols-1 md:grid-cols-2">
       <section className="p-10 border-r">
         <Formik
           initialValues={{ name: "", email: "", phoneNo: "" , course:"Web Developement", section:"Development and Database" }}
@@ -107,7 +107,7 @@ const WebPayment = () => {
           className="h-72 w-full rounded-ss-[100px] rounded-ee-[100px]"
         />
         <div className="p-2">
-          <h2 className="font-semibold text-5xl font-serif leading-normal">
+          <h2 className="font-semibold text-2xl md:text-5xl font-serif leading-normal">
             Discover new <span className="text-green-500"> learning</span>{" "}
             possibilities.
           </h2>

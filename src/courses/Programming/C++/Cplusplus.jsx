@@ -7,7 +7,7 @@ import { Link, Outlet } from "react-router-dom";
 const Cplusplus = () => {
   return (
     <section id="c++">
-      <div className="rounded-[40px]  bg-[url('https://d3mxt5v3yxgcsr.cloudfront.net/courses/7934/course_7934_image.jpeg')] bg-cover bg-no-repeat bg-top mx-10 h-80 "></div>
+      <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://d3mxt5v3yxgcsr.cloudfront.net/courses/7934/course_7934_image.jpeg"/>
       <div className="flex flex-col justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-[450px] p-10">
         <h2 className="font-bold text-xl mb-2">Course Content</h2>
