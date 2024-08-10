@@ -4,7 +4,7 @@ import App from './App.jsx';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import MainContainer from './screens/MainContainer.jsx';
-
+import Slider from "./components/Mentors.jsx";
 //! App development course
 import AppDevelopment from './courses/Development/AppDevelopment/AppDevelopment.jsx';
 import AppOverview from './courses/Development/AppDevelopment/AppOverview.jsx';
@@ -95,6 +95,7 @@ const router = createBrowserRouter([{
     path: "/",
     element: <MainContainer/>
   },
+ 
   {
     path: "/development/app-development-course",
     element: <AppDevelopment/>,

@@ -18,7 +18,7 @@ const java = () => {
           <FaLaptopCode /> hands on training
         </p>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
-          <GoProjectSymlink /> lproblem solving
+          <GoProjectSymlink /> problem solving
         </p>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
           <TbCertificate /> certificate of completion

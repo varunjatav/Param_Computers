@@ -9,7 +9,7 @@ const WebDevelopment = () => {
     <section id="web_developement">
       <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://static.vecteezy.com/system/resources/previews/000/271/024/non_2x/vector-web-development-web-banner.jpg"/>
       <div className="flex flex-col  justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
-      <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-96 p-10">
+      <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2  h-[450px] p-10">
         <h2 className="font-bold text-xl mb-2">Course Content</h2>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
           <MdOutlineLiveTv /> 4 months live classes
@@ -25,7 +25,10 @@ const WebDevelopment = () => {
         </p>
         <hr className="my-8" />
         <p className="font-bold text-2xl text-emerald-700 pb-5">
-          &#8377; 14000
+          &#8377; 19999
+        </p>
+        <p className="font-bold text-2xl text-emerald-700 pb-5">
+          &#8377;  500 (Registration)
         </p>
         <Link to="/development/web-development-payment"
           type="button"
