@@ -113,26 +113,51 @@ const WebSyllabus = () => {
           <TiTick /> Form Handling in React.
         </li>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick />Differnce between Redux and Redux Toolkit.
+          <TiTick />Difference between Redux and Redux Toolkit.
         </li>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
           <TiTick />State Mangement with Redux Toolkit.
         </li>
       </ul>
       <h2 className="font-bold text-xl lg:text-2xl my-5">
-           Module 5: Backend With Node and Express.js
+           Module 6: Backend With Node and Express.js
       </h2>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick /> Introduction to React and React DevTools.
+          <TiTick /> Understanding server-side programming.
         </li>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick />Component Based Architecture.
+          <TiTick />Introduction to Node.js and Express.js
         </li>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick /> State Mangement with Hooks
+          <TiTick /> Creation of APIs and CRUD operations
         </li>
-      
+        <li className="flex items-center gap-3 mb-2 text-gray-500">
+          <TiTick />Model View Controller and Node.js Architechture. 
+        </li>
+      </ul>
+      <h2 className="font-bold text-xl lg:text-2xl my-5">
+           Module 7: Database Management
+      </h2>
+      <ul>
+        <li className="flex items-center gap-3 mb-2 text-gray-500">
+          <TiTick /> Overview of Database: SQL and NoSQL.
+        </li>
+        <li className="flex items-center gap-3 mb-2 text-gray-500">
+          <TiTick />Introduction to MongoDB
+        </li>
+        <li className="flex items-center gap-3 mb-2 text-gray-500">
+          <TiTick /> CRUD Operations in MongoDB
+        </li>
+        <li className="flex items-center gap-3 mb-2 text-gray-500">
+          <TiTick /> Projections , Indexes and Aggregation in MongoDB  
+        </li>
+        <li className="flex items-center gap-3 mb-2 text-gray-500">
+          <TiTick /> Introduction to MongoDB Atlas  
+        </li>
+        <li className="flex items-center gap-3 mb-2 text-gray-500">
+          <TiTick />Working with Mongoose  
+        </li>
       </ul>
     </div>
   )
