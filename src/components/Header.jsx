@@ -30,12 +30,12 @@ const Header = () => {
         <RxHamburgerMenu className="text-5xl block lg:hidden" />
       </button>
       <section className={`gap-10 hidden lg:flex`}>
-        <Link to="/" className="font-semibold text-xl">
+        <Link to="/" className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400">
           Home
         </Link>
-        <a href="/#about" className="font-semibold text-xl">About</a>
-        <a href="/#courses" className="font-semibold text-xl">Courses</a>
-        <a href="/#contact" className="font-semibold text-xl">Contact</a>
+        <a href="/#about" className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400">About</a>
+        <a href="/#courses" className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400">Courses</a>
+        <a href="/#contact" className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400 active:text-teal-400">Contact</a>
       </section>
     </header>
     <Sidebar/>
