@@ -12,7 +12,7 @@ const Support = () => {
           <GrMapLocation className="text-5xl text-teal-400" />
           <h3 className="font-semibold text-xl text-teal-400">Visit Us</h3>
           <p className="text-lg text-gray-500">
-            Near Bundelkhand University, Jhansi
+            Maharaja Pratap Nagar, Jhansi
           </p>
         </div>
         <div className="border-2 border-teal-400 w-72 p-5 h-48 rounded-2xl flex flex-col gap-2 items-left justify-center">

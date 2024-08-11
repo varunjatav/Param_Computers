@@ -31,11 +31,11 @@ const Header = () => {
         <RxHamburgerMenu className="text-5xl block lg:hidden" />
       </button>
       <section className={`gap-10 hidden lg:flex`}>
-        <LinkRouter to="/" smooth={true} duration={500} className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400 cursor-pointer">
+        <LinkRouter to="/"  className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400 cursor-pointer">
           Home
         </LinkRouter>
 
-        <LinkScroll to="about" smooth={true} duration={200} className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400 cursor-pointer">About</LinkScroll>
+        <LinkRouter to="/about-us"  className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400 cursor-pointer">About</LinkRouter>
 
         <LinkScroll to="courses" smooth={true} duration={200} className="font-semibold text-xl hover:text-teal-400 active:text-teal-400 focus:text-teal-400 cursor-pointer">Courses</LinkScroll>
         <LinkRouter to="/contact-us" className="font-semibold text-xl hover:text-teal-400 cursor-pointer focus:text-teal-400 active:text-teal-400">Contact</LinkRouter>

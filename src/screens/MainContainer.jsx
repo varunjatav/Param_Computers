@@ -1,6 +1,6 @@
 import React from "react";
 import Courses from "../components/Courses";
-import Mentors from "../components/Mentors";
+import MentorSlider from "../components/Mentors";
 import StudentBanner from "../components/StudentBanner";
 import PassionBanner from "../components/PassionBanner";
 import ContactForm from "../components/ContactForm";
@@ -43,7 +43,7 @@ const MainContainer = () => {
 
        <Courses/>
        <StudentBanner/>
-       <Mentors/>
+       <MentorSlider/>
        <PassionBanner/>
        <ContactForm/>
       </main>

@@ -20,14 +20,10 @@
 }
 
 
-.slider {
-  margin:0 20px;
-  overflow:"hidden";
-  padding:2rem 0;
-}
+
 
 .slider img {
-  width: 100%;
+  width: 70%;
   border-radius:10px;
 }
 
