@@ -6,7 +6,7 @@ import { TbCertificate } from "react-icons/tb";
 import { Link, Outlet } from "react-router-dom";
 const AdvanceExcel = () => {
   return (
-    <section id="advance_excel">
+    <section id="advance_excel" className=" mt-20 pt-10">
       <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://images.ctfassets.net/lzny33ho1g45/2S0H6GfYCc2HqJb0tQIvPQ/f188f5eb70a93984e9b42153d257e622/excel_hero.jpg?w=1520&fm=jpg&q=30&fit=thumb&h=760"/>
       <div className="flex flex-col  justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-96 p-10">

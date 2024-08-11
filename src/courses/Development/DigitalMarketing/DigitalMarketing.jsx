@@ -6,7 +6,7 @@ import { TbCertificate } from "react-icons/tb";
 import { Link, Outlet } from "react-router-dom";
 const DigitalMarketing = () => {
   return (
-    <section id="digital_marketing">
+    <section id="digital_marketing" className=" mt-20 pt-10">
        <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://www.berlinsbi.com/uploads/sites/2/2021/12/5-ways-msc-digital-marketing-will-advance-your-career.jpg"/>
       <div className="flex flex-col justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-[450px] p-10">

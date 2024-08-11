@@ -6,7 +6,7 @@ import { TbCertificate } from "react-icons/tb";
 import { Link, Outlet } from "react-router-dom";
 const Database = () => {
   return (
-    <section id="database">
+    <section id="database" className=" mt-20 pt-10">
        <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://learnsql.com/blog/what-is-dbms/DBMS.png"/>
       <div className="flex flex-col justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-96 p-10">

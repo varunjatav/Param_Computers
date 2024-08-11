@@ -15,7 +15,7 @@ const AppPayment = () => {
   };
 
   return (
-    <section  className="grid grid-cols-1 md:grid-cols-2">
+    <section className="grid grid-cols-1 md:grid-cols-2 mt-20 pt-10">
       <section className="p-10 border-r">
         <Formik
           initialValues={{ name: "", email: "", phoneNo: "" , course:"Mobile App Developement", section:"Development and Database" }}

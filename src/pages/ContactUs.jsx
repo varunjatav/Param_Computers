@@ -5,11 +5,11 @@ import Support from '../components/Support'
 
 const ContactUs = () => {
   return (
-    <>
+    <div className="mt-20 pt-10">
         <ContactForm/>
         <Support/>
         <Map/>
-    </>
+    </div>
   )
 }
 

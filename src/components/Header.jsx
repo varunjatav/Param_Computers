@@ -22,7 +22,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="flex py-3 px-10 justify-between items-center">
+      <header className="flex py-1 px-10 justify-between items-center fixed top-0 w-full bg-white z-10">
         <section>
           <LinkRouter to="/">
             <img

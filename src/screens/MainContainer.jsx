@@ -12,7 +12,7 @@ const MainContainer = () => {
       <main >
         <section
           id="hero_image"
-          className="bg-gradient-to-b from-white to-teal-100 pt-10"
+          className="bg-gradient-to-b from-white to-teal-100 mt-20 pt-10"
         >
           <center>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold leading-[60px] lg:leading-[100px] uppercase">

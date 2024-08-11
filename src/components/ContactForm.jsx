@@ -3,7 +3,7 @@ import React from 'react'
 
 const ContactForm = () => {
   return (
-    <section className="flex flex-col pb-32 pt-20 px-10 mb-20 md:flex-row justify-between h-[450px]">
+    <section className="flex flex-col pb-32 pt-20 px-10  md:flex-row justify-between">
         <section className="w-full h-full px-3">
         <h2 className="font-bold text-3xl mb-5">Contact Us</h2>
         <Formik

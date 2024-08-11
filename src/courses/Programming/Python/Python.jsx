@@ -6,7 +6,7 @@ import { TbCertificate } from "react-icons/tb";
 import { Link, Outlet } from "react-router-dom";
 const Python = () => {
   return (
-    <section id="Python">
+    <section id="Python" className="mt-20 pt-10">
        <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://c4.wallpaperflare.com/wallpaper/645/96/47/python-programming-programming-programming-language-code-hd-wallpaper-preview.jpg"/>
       <div className="flex flex-col justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-[450px] p-10">

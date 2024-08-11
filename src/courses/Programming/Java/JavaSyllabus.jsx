@@ -108,7 +108,7 @@ const JavaSyllabus = () => {
         </li>
       </ul>
       <h2 className="font-bold text-xl lg:text-2xl my-5">
-        Module 7: Java Application Development
+        Module 8: Java Application Development
       </h2>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">

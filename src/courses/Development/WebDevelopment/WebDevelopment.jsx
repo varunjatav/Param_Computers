@@ -6,7 +6,7 @@ import { TbCertificate } from "react-icons/tb";
 import { Link, Outlet } from "react-router-dom";
 const WebDevelopment = () => {
   return (
-    <section id="web_developement">
+    <section id="web_developement" className=" mt-20 pt-10">
       <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://static.vecteezy.com/system/resources/previews/000/271/024/non_2x/vector-web-development-web-banner.jpg"/>
       <div className="flex flex-col  justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2  h-[450px] p-10">

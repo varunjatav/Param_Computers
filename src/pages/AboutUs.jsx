@@ -7,7 +7,7 @@ import MentorSlider from "../components/Mentors";
 const AboutUs = () => {
   return (
     <>
-      <section className="p-10 my-10 w-[95%] lg:w-[90%] m-auto">
+      <section className="p-10 my-10 w-[95%] lg:w-[90%] m-auto mt-20 pt-10">
         <h2 className="text-3xl text-center font-semibold pb-4">Who Are We</h2>
         <div className="border-4 border-teal-400 w-32 m-auto rounded-md"></div>
         <p className="text-lg text-gray-500 pt-5  m-auto">
@@ -45,7 +45,7 @@ const AboutUs = () => {
               </h3>
             </div>
             <p className="text-slate-500 group-hover:text-white text-sm">
-              Experience Real-World Learning
+              Experience Real-World Learning : Enroll in our Live Project Training Program
             </p>
           </div>
           <div className="group block max-w-sm mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-teal-400 hover:ring-teal-500">

@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link as LinkRouter } from 'react-router-dom'
+import React from "react";
+import { Link as LinkRouter } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
-import { useDispatch, useSelector } from 'react-redux';
-import { ToggleSliceActions } from '../store/sideBarToggleSlice';
+import { useDispatch, useSelector } from "react-redux";
+import { ToggleSliceActions } from "../store/sideBarToggleSlice";
 import { courseToggleSliceActions } from "../store/courseToggleSlice.js";
 const Sidebar = () => {
   const dispatch = useDispatch();
-  const toggle = useSelector(store => store.sideBarToggle);
+  const toggle = useSelector((store) => store.sideBarToggle);
   const courseToggle = useSelector((store) => store.courseToggle);
   const handleToggle = () => {
     dispatch(ToggleSliceActions.setToggleSlice());
@@ -18,78 +18,71 @@ const Sidebar = () => {
     dispatch(courseToggleSliceActions.setFalse());
   };
   return (
-    <aside>
-       <section className={`gap-10 flex flex-col text-center justify-center items-center  ${!toggle && "hidden"} absolute w-[100vw] bg-white py-10 lg:hidden`}>
-        <LinkRouter to="/" className="font-semibold text-xl" onClick={handleToggle}>
+    <aside className={` ${!toggle && "hidden"} fixed z-10 top-26 w-[100vw]`}>
+      <section
+        className={`gap-10 flex flex-col text-center justify-center items-center bg-white py-10 lg:hidden`}
+      >
+        <LinkRouter
+          to="/"
+          className="font-semibold text-xl"
+          onClick={handleToggle}
+        >
           Home
         </LinkRouter>
-        <a href="#about" className="font-semibold text-xl" onClick={handleToggle}>About</a>
+        <LinkRouter
+          to="/about-us"
+          className="font-semibold text-xl"
+          onClick={handleToggle}
+        >
+          About
+        </LinkRouter>
         <div
-            className="relative inline-block text-left"
-            onMouseEnter={handleCourseToggleTrue}
-            onMouseLeave={handleCourseToggleFalse}
-          >
-            <div>
-              <button
-                type="button"
-                className="inline-flex font-semibold text-lg w-full justify-center items-center gap-x-1.5 rounded-md bg-white  text-gray-900  hover:bg-gray-50"
-                id="menu-button"
-                aria-expanded="true"
-                aria-haspopup="true"
-              >
-                Courses
-                <svg
-                  className="-mr-1 h-5 w-5 text-gray-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-            {courseToggle && (
-              <div
-                className="absolute right-0 z-10 mt-0 w-80 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="menu-button"
-                tabIndex="-1"
-                onMouseEnter={handleCourseToggleTrue}
-              >
-                <div className="py-1" role="none">
+          className="sticky flex flex-col text-left"
+        >
+          
+            <button
+              className="inline-flex font-semibold text-lg text-center m-auto justify-center items-center gap-x-1.5 rounded-md bg-white  text-gray-900  hover:bg-gray-50"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+              onClick={courseToggle ? handleCourseToggleFalse : handleCourseToggleTrue}
+            >
+              Courses
+            </button>
+            {
+              courseToggle && (
+                <div className="text-center">
                   <div className="px-4 py-2">
                     <h2 className="text-lg font-semibold">Development</h2>
                   </div>
-
-                  <LinkRouter
-                    to="/development/web-development-course"
-                    className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
-                    role="menuitem"
-                    tabIndex="-1"
-                    id="menu-item-0"
-                  >
-                    Web Development
-                  </LinkRouter>
-                  <LinkRouter
-                    to="/development/app-development-course"
-                    className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
-                    role="menuitem"
-                    tabIndex="-1"
-                    id="menu-item-1"
-                  >
-                    Mobile App Development
-                  </LinkRouter>
-                  <LinkRouter
+                <LinkRouter
+                  to="/development/web-development-course"
+                  className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
+                  role="menuitem"
+                  tabIndex="-1"
+                  id="menu-item-0"
+                   
+                  onClick={handleToggle}
+                >
+                  Web Development
+                </LinkRouter>
+                <LinkRouter
+                  to="/development/app-development-course"
+                  className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
+                  role="menuitem"
+                  tabIndex="-1"
+                  id="menu-item-1"
+                  onClick={handleToggle}
+                >
+                  Mobile App Development
+                </LinkRouter>
+                <LinkRouter
                     to="/development/software-development-course"
                     className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-1"
+                    onClick={handleToggle}
                   >
                     Software Development
                   </LinkRouter>
@@ -99,6 +92,7 @@ const Sidebar = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-1"
+                    onClick={handleToggle}
                   >
                     Digital Marketing
                   </LinkRouter>
@@ -108,6 +102,7 @@ const Sidebar = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-1"
+                    onClick={handleToggle}
                   >
                    Advance Excel
                   </LinkRouter>
@@ -117,6 +112,7 @@ const Sidebar = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-1"
+                    onClick={handleToggle}
                   >
                     DBMS
                   </LinkRouter>
@@ -129,6 +125,7 @@ const Sidebar = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-0"
+                      onClick={handleToggle}
                   >
                     C 
                   </LinkRouter>
@@ -138,6 +135,7 @@ const Sidebar = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-1"
+                    onClick={handleToggle}
                   >
                     C++ 
                   </LinkRouter>
@@ -147,6 +145,7 @@ const Sidebar = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-1"
+                    onClick={handleToggle}
                   >
                     Java 
                   </LinkRouter>
@@ -156,18 +155,29 @@ const Sidebar = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-1"
+                    onClick={handleToggle}
                   >
                     Python 
                   </LinkRouter>
-                </div>
               </div>
-            )}
+              )
+            }
+           
           </div>
-        <a href="#contact" className="font-semibold text-xl" onClick={handleToggle}>Contact</a>
-        <button onClick={handleToggle}><RxCross2 /></button>
+        
+        <LinkRouter
+          to="/contact-us"
+          className="font-semibold text-xl"
+          onClick={handleToggle}
+        >
+          Contact
+        </LinkRouter>
+        <button onClick={handleToggle}>
+          <RxCross2 />
+        </button>
       </section>
     </aside>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

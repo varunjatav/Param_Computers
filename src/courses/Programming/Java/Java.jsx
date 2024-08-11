@@ -6,7 +6,7 @@ import { TbCertificate } from "react-icons/tb";
 import { Link, Outlet } from "react-router-dom";
 const java = () => {
   return (
-    <section id="java">
+    <section id="java" className="mt-20 pt-10">
         <img className="rounded-[40px] w-[90vw] md:w-[80vw] h-[250px] md:h-[400px] m-auto" src="https://www.uttarainfo.com/blog/wp-content/uploads/2023/06/screenshot-2021-02-11-at-115416.png"/>
       <div className="flex flex-col justify-center lg:flex-row gap-10 mx-2 lg:ml-10 mt-10">
       <aside className="flex-initial m-auto lg:m-0 w-80 rounded-[20px] border-2 h-[450px] p-10">
