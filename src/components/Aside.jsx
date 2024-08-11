@@ -6,7 +6,6 @@ import { ToggleSliceActions } from '../store/sideBarToggleSlice';
 const Sidebar = () => {
   const dispatch = useDispatch();
   const toggle = useSelector(store => store.sideBarToggle);
-  // console.log("toggle", toggle);
   const handleToggle = () => {
     dispatch(ToggleSliceActions.setToggleSlice());
   };

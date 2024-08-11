@@ -25,37 +25,37 @@ const AboutUs = () => {
         </h2>
         <div className="border-4 border-teal-400 w-32 m-auto rounded-md"></div>
         <section className="flex flex-col lg:flex-row gap-10 justify-around py-5">
-          <div class="group block max-w-sm mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-teal-400 hover:ring-teal-500">
-            <div class="flex items-center space-x-3">
-              <GrTechnology className="text-2xl" />
-              <h3 class="text-slate-900 group-hover:text-white  font-semibold text-xl">
+          <div className="group block max-w-sm mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-teal-400 hover:ring-teal-500">
+            <div className="flex items-center space-x-3">
+              <GrTechnology className="text-2xl group-hover:text-white" />
+              <h3 className="text-slate-900 group-hover:text-white  font-semibold text-xl">
                 Latest IT Courses
               </h3>
             </div>
-            <p class="text-slate-500 group-hover:text-white text-sm">
+            <p className="text-slate-500 group-hover:text-white text-sm">
               Stay Ahead of Cutting Edge Knowledge: Expolre Our Latest IT
               Courses
             </p>
           </div>
-          <div class="group block max-w-sm mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-teal-400 hover:ring-teal-500">
-            <div class="flex items-center space-x-3">
-              <GoProjectSymlink className="text-2xl" />
-              <h3 class="text-slate-900 group-hover:text-white  font-semibold text-xl">
+          <div className="group block max-w-sm mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-teal-400 hover:ring-teal-500">
+            <div className="flex items-center space-x-3">
+              <GoProjectSymlink className="text-2xl group-hover:text-white" />
+              <h3 className="text-slate-900 group-hover:text-white  font-semibold text-xl">
                 Live Project Training
               </h3>
             </div>
-            <p class="text-slate-500 group-hover:text-white text-sm">
+            <p className="text-slate-500 group-hover:text-white text-sm">
               Experience Real-World Learning
             </p>
           </div>
-          <div class="group block max-w-sm mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-teal-400 hover:ring-teal-500">
-            <div class="flex items-center space-x-3">
-              <SiFuturelearn className="text-2xl" />
-              <h3 class="text-slate-900 group-hover:text-white  font-semibold text-xl">
+          <div className="group block max-w-sm mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-teal-400 hover:ring-teal-500">
+            <div className="flex items-center space-x-3">
+              <SiFuturelearn className="text-2xl group-hover:text-white" />
+              <h3 className="text-slate-900 group-hover:text-white  font-semibold text-xl">
                 Dynamic Learning Environment
               </h3>
             </div>
-            <p class="text-slate-500 group-hover:text-white text-sm">
+            <p className="text-slate-500 group-hover:text-white text-sm">
               Active engagement, critical thinking, abd continous growth,
               preparing students to thrive in an ever-changing world
             </p>
