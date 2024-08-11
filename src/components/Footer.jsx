@@ -4,7 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
 const Footer = () => {
   return (
-    <footer id="contact" className="mt-10">
+    <footer id="contact" className="mt-60 bg-teal-50">
       <div className="flex justify-between items-center p-10 flex-col lg:flex-row">
         <section>
           <img

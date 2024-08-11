@@ -4,10 +4,10 @@ import { MdAddIcCall } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 const Support = () => {
   return (
-    <section className="p-14">
+    <section className="py-20 px-12">
       <h2 className="font-semibold text-3xl mb-5">Quick Support</h2>
       <p className="text-xl font-thin">You can get all contact information here</p>
-      <div className="flex flex-row justify-between items-center p-5">
+      <div className="flex flex-row justify-between items-center py-5">
         <div className="border-2 border-teal-400 w-72 p-5 h-48 rounded-2xl flex flex-col gap-2 items-left justify-center">
           <GrMapLocation className="text-5xl text-teal-400" />
           <h3 className="font-semibold text-xl text-teal-400">Visit Us</h3>

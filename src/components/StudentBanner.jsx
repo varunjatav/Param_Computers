@@ -3,7 +3,7 @@ import React from "react";
 const StudentBanner = () => {
   return (
     <section className="text-gray-600 body-font bg-teal-50">
-      <div className="container mx-auto flex px-10 py-24 md:flex-row flex-col items-center gap-5">
+      <div className="container mx-auto flex flex-col justify-center px-10 py-24 md:flex-row items-center gap-5">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <img
             className="object-cover object-center rounded-xl w-[500px] h-[600px] m-auto"

@@ -3,8 +3,8 @@ import React from 'react'
 
 const ContactForm = () => {
   return (
-    <section className="flex flex-col p-10 my-10 md:flex-row justify-between">
-        <section className="w-full p-3">
+    <section className="flex flex-col pb-32 pt-20 px-10 mb-20 md:flex-row justify-between h-[450px]">
+        <section className="w-full h-full px-3">
         <h2 className="font-bold text-3xl mb-5">Contact Us</h2>
         <Formik
          initialValues={{ name: "", email: "", phoneNo: "" ,message: ""}}
@@ -102,16 +102,16 @@ const ContactForm = () => {
                 type="submit"
                 value="Send"
                 disabled={isSubmitting}
-                className=" bg-green-400 text-xl font-thin hover:bg-green-700 text-white py-2 px-4 rounded-md cursor-pointer w-32"
+                className=" bg-teal-400 text-xl font-normal hover:bg-teal-700 text-white py-2 px-4 rounded-md cursor-pointer w-32"
               />
             </form>
           )}
         </Formik>
         </section>
-        <section className='w-full p-3'>
+        <section className='w-full p-3 h-full'>
        
           <img
-            className="object-cover object-center rounded-xl h-[600px] m-auto"
+            className="object-cover object-center rounded-xl m-auto h-[450px]"
             alt="param_computers_students"
             src="./passion.jpg"
             loading="lazy"

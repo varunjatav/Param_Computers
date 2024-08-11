@@ -37,17 +37,17 @@ const Header = () => {
         <button onClick={handleToggle}>
           <RxHamburgerMenu className="text-5xl block lg:hidden" />
         </button>
-        <section className={`gap-10 hidden lg:flex`}>
+        <section className={`gap-10 hidden lg:flex lg:justify-between`}>
           <LinkRouter
             to="/"
-            className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400 cursor-pointer"
+            className="font-semibold text-lg hover:text-teal-400 focus:text-teal-400 cursor-pointer"
           >
             Home
           </LinkRouter>
 
           <LinkRouter
             to="/about-us"
-            className="font-semibold text-xl hover:text-teal-400 focus:text-teal-400 cursor-pointer"
+            className="font-semibold text-lg hover:text-teal-400 focus:text-teal-400 cursor-pointer"
           >
             About
           </LinkRouter>
@@ -60,7 +60,7 @@ const Header = () => {
             <div>
               <button
                 type="button"
-                className="inline-flex font-semibold text-lg w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2  text-gray-900 shadow-sm ring-1 ring-inset  ring-gray-300 hover:bg-gray-50"
+                className="inline-flex font-semibold text-lg w-full justify-center items-center gap-x-1.5 rounded-md bg-white  text-gray-900  hover:bg-gray-50"
                 id="menu-button"
                 aria-expanded="true"
                 aria-haspopup="true"
@@ -193,7 +193,7 @@ const Header = () => {
           </div>
           <LinkRouter
             to="/contact-us"
-            className="font-semibold text-xl hover:text-teal-400 cursor-pointer focus:text-teal-400 active:text-teal-400"
+            className="font-semibold text-lg hover:text-teal-400 cursor-pointer focus:text-teal-400 active:text-teal-400"
           >
             Contact
           </LinkRouter>
