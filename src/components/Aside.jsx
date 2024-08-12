@@ -22,7 +22,7 @@ const Sidebar = () => {
     <>
       {" "}
       <aside
-        className={`fixed z-10 top-[108px] w-[80vw] max-h-[100vh] h-[100vh] overflow-y-auto transition-transform duration-500 ${
+        className={`fixed z-10 top-[108px] w-[80vw] max-h-[80vh] h-[80vh] overflow-y-auto transition-transform duration-500 ${
           toggle ? "translate-x-0" : "-translate-x-full"
         }`}
       >
