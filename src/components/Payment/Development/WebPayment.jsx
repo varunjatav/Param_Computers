@@ -17,7 +17,7 @@ const WebPayment = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 mt-20 pt-10">
       <section className="p-10 border-r">
         <Formik
-          initialValues={{ name: "", email: "", phoneNo: "" , course:"Web Developement", section:"Development and Database" }}
+          initialValues={{ name: "", email: "", phoneNo: "" , mode:"", course:"Web Developement", section:"Development and Database" }}
           validate={(values) => {
             const errors = {};
             if (!values.email) {
@@ -28,6 +28,9 @@ const WebPayment = () => {
             } 
             if (!values.phoneNo) {
               errors.phoneNo = "Contact is required";
+            } 
+            if (!values.mode && values.mode === "") {
+              errors.mode = "Mode of Learning is required";
             } 
             return errors;
           }}
@@ -61,9 +64,9 @@ const WebPayment = () => {
                 onBlur={handleBlur}
                 value={values.name}
                 placeholder="Enter Your Name"
-                className="w-full border-2 border-black rounded-md p-2"
+                className="w-full border-2 border-gray-500 rounded-md p-2 focus:ring focus:ring-teal-400 focus:outline-none"
               />
-              {errors.name && touched.name && errors.name}
+             <p className="text-red-600 text-sm font-bold">{errors.name && touched.name && errors.name +" *"}</p>  
               <label htmlFor="Email" className="font-bold">
                 Email Address :
               </label>
@@ -74,9 +77,9 @@ const WebPayment = () => {
                 onBlur={handleBlur}
                 value={values.email}
                 placeholder="Enter Your Email"
-                className="w-full border-2 border-black rounded-md p-2"
+                className="w-full border-2 border-gray-500 rounded-md p-2 focus:ring focus:ring-teal-400 focus:outline-none"
               />
-              {errors.email && touched.email && errors.email}
+             <p className="text-red-600 text-sm font-bold">{errors.email && touched.email && errors.email +" *"}</p> 
               <label htmlFor="Mobile" className="font-bold">
                 Mobile No:
               </label>
@@ -85,16 +88,25 @@ const WebPayment = () => {
                 type="text"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.phondeNo}
+                value={values.phoneNo}
                 placeholder="Enter Your Mobile Number"
-                className="w-full border-2 border-black rounded-md p-2"
+                className="w-full border-2 border-gray-500 rounded-md p-2 focus:ring focus:ring-teal-400 focus:outline-none"
               />
-              {errors.phoneNo && touched.phoneNo && errors.phoneNo}
+              <p className="text-red-600 text-sm font-bold">{errors.phoneNo && touched.phoneNo && errors.phoneNo +" *"}</p>
+              <label htmlFor="Mobile" className="font-bold">
+               Mode :
+              </label>
+              <select  onChange={handleChange} name="mode" id="mode"  value={values.mode} className="w-full border-2  text-md border-gray-500 rounded-md p-2 focus:ring focus:ring-teal-400 focus:outline-none">
+                <option value="">Select Mode of Learning</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+              <p className="text-red-600 text-sm font-bold">{errors.mode && touched.mode && errors.mode +" *"}</p>  
               <input
                 type="submit"
                 value="Pay"
                 disabled={isSubmitting}
-                className=" bg-green-400 text-white py-2 px-4 rounded-md cursor-pointer"
+                className=" bg-teal-400 text-white py-2 px-4 rounded-md cursor-pointer hover:bg-teal-700 w-28 focus:ring-4 focus:ring-teal-300"
               />
             </form>
           )}
@@ -108,7 +120,7 @@ const WebPayment = () => {
         />
         <div className="p-2">
           <h2 className="font-semibold text-2xl md:text-5xl font-serif leading-normal">
-            Discover new <span className="text-green-500"> learning</span>{" "}
+            Discover new <span className="text-teal-500"> learning</span>{" "}
             possibilities.
           </h2>
           <p className="font-serif pt-4">
