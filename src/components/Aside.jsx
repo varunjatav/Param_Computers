@@ -179,9 +179,6 @@ const Sidebar = () => {
           >
             Contact
           </LinkRouter>
-          <button onClick={handleToggle}>
-            <RxCross2 />
-          </button>
         </section>
       </aside>
     </>

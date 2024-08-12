@@ -6,8 +6,10 @@ import Sidebar from "./Aside.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { ToggleSliceActions } from "../store/sideBarToggleSlice.js";
 import { courseToggleSliceActions } from "../store/courseToggleSlice.js";
+import { RxCross1 } from "react-icons/rx";
 const Header = () => {
   const courseToggle = useSelector((store) => store.courseToggle);
+  const toggle = useSelector((store) => store.sideBarToggle);
   const dispatch = useDispatch();
   console.log("course toggle", courseToggle);
 
@@ -35,7 +37,7 @@ const Header = () => {
         </section>
 
         <button onClick={handleToggle}>
-          <RxHamburgerMenu className="text-5xl block lg:hidden" />
+         {toggle? <RxHamburgerMenu className="text-5xl block lg:hidden" />:<RxCross1 className="text-5xl block lg:hidden"/>}
         </button>
         <section className={`gap-10 hidden lg:flex lg:justify-between`}>
           <LinkRouter
