@@ -86,8 +86,11 @@ import paramStore from './store/paramStore.js';
 import CPayment from './components/Payment/Programming/CPayment.jsx';
 import CPlusPayment from './components/Payment/Programming/CPlusPayment.jsx';
 import PythonPayment from './components/Payment/Programming/PythonPayment.jsx';
-import ContactUs from './pages/ContactUs.jsx';
-import AboutUs from './pages/AboutUs.jsx';
+
+
+// ! Screens
+import ContactUs from './screens/ContactUs.jsx';
+import AboutUs from './screens/AboutUs.jsx';
 
 
 

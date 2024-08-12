@@ -61,7 +61,7 @@ const MentorSlider = () => {
   };
 
   return (
-    <section>
+    <section className="w-[95%] m-auto">
       <center className="py-14">
         <h1 className="text-3xl uppercase font-semibold pb-4">
           Get to <span className="text-teal-400 "> Know Your </span> Mentors
