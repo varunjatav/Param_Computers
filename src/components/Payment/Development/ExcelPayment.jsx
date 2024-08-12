@@ -23,6 +23,7 @@ const ExcelPayment = () => {
             mode: "",
             course: "Advance Excel",
             section: "Development and Database",
+            payment: 20499,
           }}
           validate={(values) => {
             const errors = {};

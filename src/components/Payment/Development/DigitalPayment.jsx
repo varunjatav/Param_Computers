@@ -23,6 +23,7 @@ const DigitalPayment = () => {
             mode: "",
             course: "Digital Marketing",
             section: "Development and Database",
+            payment: 20499,
           }}
           validate={(values) => {
             const errors = {};

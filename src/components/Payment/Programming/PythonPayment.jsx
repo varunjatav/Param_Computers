@@ -23,6 +23,7 @@ const PythonPayment = () => {
             mode: "",
             course: "Python Programming",
             section: "Programming For Everyone",
+            payment: 5499
           }}
           validate={(values) => {
             const errors = {};
@@ -98,7 +99,7 @@ const PythonPayment = () => {
                 type="text"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.phondeNo}
+                value={values.phoneNo}
                 placeholder="Enter Your Mobile Number"
                  className="w-full border-2 border-gray-500 rounded-md p-2 focus:ring focus:ring-teal-400 focus:outline-none"
               />
@@ -122,6 +123,7 @@ const PythonPayment = () => {
               <p className="text-red-600 text-sm font-bold">
                 {errors.mode && touched.mode && errors.mode + " *"}
               </p>
+            
               <input
                 type="submit"
                 value="Pay"

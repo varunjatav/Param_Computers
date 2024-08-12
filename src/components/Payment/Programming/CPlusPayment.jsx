@@ -23,6 +23,7 @@ const CPlusPayment = () => {
             mode: "",
             course: "Introduction to C++",
             section: "Programming For Everyone",
+            payment: 6499,
           }}
           validate={(values) => {
             const errors = {};
@@ -98,7 +99,7 @@ const CPlusPayment = () => {
                 type="text"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.phondeNo}
+                value={values.phoneNo}
                 placeholder="Enter Your Mobile Number"
                 className="w-full border-2 border-gray-500 rounded-md p-2 focus:ring focus:ring-teal-400 focus:outline-none"
               />

@@ -23,6 +23,7 @@ const DatabasePayment = () => {
             mode: "",
             course: "Database Management System",
             section: "Development and Database",
+            payment: 20499,
           }}
           validate={(values) => {
             const errors = {};

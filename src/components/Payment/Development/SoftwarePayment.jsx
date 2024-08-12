@@ -23,6 +23,7 @@ const SoftwarePayment = () => {
             mode: "",
             course: "Software Developement",
             section: "Development and Database",
+            payment: 20499,
           }}
           validate={(values) => {
             const errors = {};
