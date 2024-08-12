@@ -17,12 +17,14 @@ async(values, thunkAPI) => {
 // console.log(values);
   component.mount("#my-div");
     try {
-      const response = await axios.post("https://param-backend.onrender.com/registration", {
+      const response = await axios.post("http://localhost:3001/registration", {
         name: values.name,
         email: values.email,
         phoneNo: values.phoneNo,
+        mode: values.mode,
         course: values.course,
         section: values.section,
+        payment: values.payment,
       });
       
         if (response.status === 201 && response.data.paymentSessionId) {
