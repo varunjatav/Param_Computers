@@ -37,7 +37,7 @@ const Header = () => {
         </section>
 
         <button onClick={handleToggle}>
-         {toggle? <RxHamburgerMenu className="text-5xl block lg:hidden" />:<RxCross1 className="text-5xl block lg:hidden"/>}
+         {!toggle? <RxHamburgerMenu className="text-5xl block lg:hidden" />:<RxCross1 className="text-5xl block lg:hidden"/>}
         </button>
         <section className={`gap-10 hidden lg:flex lg:justify-between`}>
           <LinkRouter
