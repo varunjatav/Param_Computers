@@ -17,8 +17,8 @@ export default {
         },
       },
       animation: {
-        slideInFromLeft: 'slideInFromLeft 1s ease-out forwards',
-        slideInFromRight: 'slideInFromRight 1s ease-out forwards',
+        slideInFromLeft: 'slideInFromLeft 0.5s ease-out forwards',
+        slideInFromRight: 'slideInFromRight 0.5s ease-out forwards',
       },
 
     },

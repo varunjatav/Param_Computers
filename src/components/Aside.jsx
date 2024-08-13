@@ -22,7 +22,7 @@ const Sidebar = () => {
     <>
       {" "}
       <aside
-        className={`fixed z-10 top-[108px] w-[80vw] max-h-[80vh] h-[80vh] overflow-y-auto transition-transform duration-500 ${
+        className={`fixed z-10 top-[108px] bottom-[0px] w-[80vw]  overflow-y-auto transition-transform duration-500 ${
           toggle ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -57,7 +57,7 @@ const Sidebar = () => {
             </button>
 
             <div
-              className={`overflow-hidden transition-transform duration-500 ease-in-out ${
+              className={`overflow-hidden text-center transition-transform duration-500 ease-in-out ${
                 courseToggle
                   ? "max-h-[700px] translate-y-0"
                   : "max-h-0 -translate-y-5"

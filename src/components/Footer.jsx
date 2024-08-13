@@ -14,10 +14,10 @@ const Footer = () => {
             height={"50px"}
             className="rounded-full m-auto lg:m-0"
           />
-          <h3 className="text-gray-600 text-lg font-medium mt-5">Advance your Career with Tech Training from Param Computers.</h3>
+          <h3 className="text-gray-600 text-lg font-medium mt-5  text-center lg:text-left">Advance your Career with Tech Training from Param Computers.</h3>
         </section>
         <section>
-          <h2 className="text-2xl font-bold font-mono">Connect with us</h2>
+          <h2 className="text-2xl font-bold font-mono  text-center lg:text-left">Connect with us</h2>
           <section className="flex flex-col items-center justify-between mt-5">
             <a href="whatsapp:contact=7355522487"className="flex items-center gap-2">
               <FaWhatsapp className="text-xl text-green-600" />{" "}

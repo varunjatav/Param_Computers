@@ -62,7 +62,7 @@ const MentorSlider = () => {
   };
 
   return (
-    <section className="w-[95%] m-auto">
+    <section className="w-[90%] m-auto">
       <center className="py-14">
         <SlideAnimation>
         <h1 className="text-3xl uppercase font-semibold pb-4">

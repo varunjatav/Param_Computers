@@ -15,7 +15,7 @@ const AboutUs = () => {
         </SlideInFromLeft>
         <div className="border-4 border-teal-400 w-32 m-auto rounded-md"></div>
         <SlideInFromRight>
-        <p className="text-lg text-gray-500 pt-5  m-auto">
+        <p className="text-lg text-gray-500 pt-5 m-auto text-center lg:text-left">
           Welcome to Param Computers, pioneering computer eductaion since 2001.
           We empower individual for success in a digital landscape. With 23
           years of expertise, We've guided countless students in mastering
@@ -73,8 +73,9 @@ const AboutUs = () => {
           </div>
         </section>
         </SlideInFromRight>
-        <MentorSlider/>
+       
       </section>
+      <MentorSlider/>
     </>
   );
 };
