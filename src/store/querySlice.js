@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const query = createAsyncThunk("query", async (values, thunk) => {
   try {
-    const response = await axios.post("http://localhost:3001/api/query",{
+    const response = await axios.post("https://param-backend.onrender.com/api/query",{
         name: values.name,
         email: values.email,
         phoneNo: values.phoneNo,
