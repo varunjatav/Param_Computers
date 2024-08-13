@@ -2,11 +2,14 @@ import React from "react";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FcAssistant } from "react-icons/fc";
 import { RiCalendarScheduleLine } from "react-icons/ri";
+import SlideInFromLeft from "./SlideInFromLeft";
+import SlideInFromRight from "./SlideInFromRight";
 const PassionBanner = () => {
   return (
     <section className="text-gray-600 body-font bg-teal-50 my-20">
       <div className="container mx-auto flex px-10 py-24 md:flex-row flex-col items-center gap-5">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <SlideInFromLeft>
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
             Igniting A <span className="text-teal-400">Passion</span> That Will
             Propel You Forward
@@ -21,8 +24,11 @@ const PassionBanner = () => {
             you're looking to elevate your programming skills, Param Computers
             is the perfect choice, offering comprehensive and dynamic education.
           </p>
+          </SlideInFromLeft>
+          <SlideInFromLeft>
           <section className="flex flex-col lg:flex-row items-center justify-between">
             <article>
+              
               <div className="bg-teal-400 rounded-md h-12 w-12 mb-4 flex items-center justify-center m-auto md:m-0">
                 <FcAssistant className="text-3xl text-teal-800" />
               </div>
@@ -33,6 +39,7 @@ const PassionBanner = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti, consectetur.
               </p>
+              
             </article>
             <article>
               <div className="bg-teal-400 rounded-md h-12 w-12 mb-4 flex items-center justify-center  m-auto md:m-0">
@@ -59,14 +66,17 @@ const PassionBanner = () => {
               </p>
             </article>
           </section>
+          </SlideInFromLeft>
         </div>
         <div className="lg:max-w-lg lg:w-full w-5/6 md:w-1/2 ">
+          <SlideInFromRight>
           <img
             className="object-cover object-center rounded-xl w-[1000px] h-[600px] m-auto"
             alt="param_computers_students"
             src="./passion.jpg"
             loading="lazy"
           />
+          </SlideInFromRight>
         </div>
       </div>
     </section>

@@ -1,33 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import SlideInFromLeft from "./SlideInFromLeft";
+
 const Courses = () => {
   return (
     <section id="courses" className="py-24">
       <center className="pb-16">
+       <SlideInFromLeft>
         <h1 className="text-3xl uppercase font-semibold text-teal-400">
           Courses For You
         </h1>
+        </SlideInFromLeft>
       </center>
       <div className="p-10">
+     <SlideInFromLeft>
         <h2 className="text-3xl uppercase font-semibold text-gray-700">
           {" "}
           Development and Database
         </h2>
+        </SlideInFromLeft>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
         <Link to="/development/web-development-course">
           <div className="cursor-pointer group">
             <div className="h-[250px] mb-5 bg-[url('https://static.vecteezy.com/system/resources/previews/000/271/024/non_2x/vector-web-development-web-banner.jpg')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
             <div className="p-2">
+           
               <h2 className="text-2xl font-bold text-gray-600">
                 Web Development
               </h2>
+              
               <p className="text-gray-400">
                 Master Full Stack Web Development to bridge front-end design
                 with back-end functionality, essential for creating robust web
                 applications.
               </p>
+              
               <pre>7 modules | 6 months | &#8377; 19,999</pre>
             </div>
           </div>
@@ -111,9 +120,11 @@ const Courses = () => {
         </Link>
       </div>
       <div className="p-10">
+      <SlideInFromLeft>
         <h2 className="text-3xl uppercase font-semibold text-gray-700">
           Programming For Everyone
         </h2>
+        </SlideInFromLeft>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
         <Link to="/programming/java">

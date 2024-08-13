@@ -2,6 +2,7 @@ import React from "react";
 
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
+import SlideAnimation from "./SlideInFromLeft";
 
 const sliderImageUrl = [
   //First image url
@@ -63,9 +64,11 @@ const MentorSlider = () => {
   return (
     <section className="w-[95%] m-auto">
       <center className="py-14">
+        <SlideAnimation>
         <h1 className="text-3xl uppercase font-semibold pb-4">
           Get to <span className="text-teal-400 "> Know Your </span> Mentors
         </h1>
+        </SlideAnimation>
         <div className="border-4 border-teal-400 w-32 m-auto rounded-md"></div>
       </center>
       <div className="slider-container">

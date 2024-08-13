@@ -7,6 +7,7 @@ import ContactForm from "../components/ContactForm";
 import HeroSection from "../components/HeroSection";
 
 
+
 const MainContainer = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const MainContainer = () => {
       <HeroSection/>
 
        <Courses/>
+       
        <StudentBanner/>
        <MentorSlider/>
        <PassionBanner/>
