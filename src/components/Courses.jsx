@@ -48,8 +48,9 @@ const Courses = () => {
                 Advance Excel
               </h2>
               <p className="text-gray-400">
-                Sed libero enim sed faucibus turpis in eu. Sit amet est placerat
-                in. Donec et odio pellentesque diam volutpat
+                Master Advanced Excel at Param Computers to boost productivity
+                and make data-driven decisions. Learn macros, pivot tables, and
+                more with our hands-on courses. Enroll today!
               </p>
               <pre>4 curriculum | 4 months | &#8377; 10000</pre>
             </div>
@@ -58,12 +59,13 @@ const Courses = () => {
 
         <Link to="/development/database-course">
           <div className="cursor-pointer">
-            <div className="h-[250px] bg-[url('https://learnsql.com/blog/what-is-dbms/DBMS.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+            <div className="h-[250px] mb-5 bg-[url('https://learnsql.com/blog/what-is-dbms/DBMS.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
             <div className="p-2">
               <h2 className="text-2xl font-bold text-gray-600">Database</h2>
               <p className="text-gray-400">
-                Sed libero enim sed faucibus turpis in eu. Sit amet est placerat
-                in. Donec et odio pellentesque diam volutpat
+                Master Database Management Systems at Param Computers. Learn
+                MySQL, PostgreSQL, and MongoDB from experts to excel in data
+                management. Enroll now and elevate your career.
               </p>
               <pre>4 curriculum | 4 months | &#8377; 10000</pre>
             </div>
@@ -158,10 +160,11 @@ const Courses = () => {
                 Mastering C Programming
               </h2>
               <p className="text-gray-400">
-                Sed libero enim sed faucibus turpis in eu. Sit amet est placerat
-                in. Donec et odio pellentesque diam volutpat
+                Advance your coding with C at Param Computers! Our courses for
+                all levels offer essential skills and practical experience. Join
+                us online or offline to boost your tech career
               </p>
-              <pre>4 curriculum | 4 months | &#8377; 10000</pre>
+              <pre>8 modules | 3 months | &#8377; 4999</pre>
             </div>
           </div>
         </Link>
@@ -173,10 +176,11 @@ const Courses = () => {
                 Introduction to C++
               </h2>
               <p className="text-gray-400">
-                Sed libero enim sed faucibus turpis in eu. Sit amet est placerat
-                in. Donec et odio pellentesque diam volutpat
+                Master C++ at Param Computers with expert-led courses for all
+                skill levels. Join us online or offline and boost your tech
+                career with cutting-edge programming skills.
               </p>
-              <pre>4 curriculum | 4 months | &#8377; 10000</pre>
+              <pre>8 modules | 3 months | &#8377; 5999</pre>
             </div>
           </div>
         </Link>
@@ -191,7 +195,7 @@ const Courses = () => {
                 Sed libero enim sed faucibus turpis in eu. Sit amet est placerat
                 in. Donec et odio pellentesque diam volutpat
               </p>
-              <pre>4 curriculum | 4 months | &#8377; 10000</pre>
+              <pre>8 modules | 3 months | &#8377; 4999</pre>
             </div>
           </div>
         </Link>
