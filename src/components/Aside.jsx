@@ -76,7 +76,7 @@ const Sidebar = () => {
               >
                 Web Development
               </LinkRouter>
-              <LinkRouter
+              {/* <LinkRouter
                 to="/development/app-development-course"
                 className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
                 role="menuitem"
@@ -105,7 +105,7 @@ const Sidebar = () => {
                 onClick={handleToggle}
               >
                 Digital Marketing
-              </LinkRouter>
+              </LinkRouter> */}
               <LinkRouter
                 to="/development/advance-excel-course"
                 className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"

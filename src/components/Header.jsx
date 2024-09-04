@@ -7,11 +7,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToggleSliceActions } from "../store/sideBarToggleSlice.js";
 import { courseToggleSliceActions } from "../store/courseToggleSlice.js";
 import { RxCross1 } from "react-icons/rx";
+import logoImg from "../assets/images/Param_Computers_logo.jpg";
 const Header = () => {
   const courseToggle = useSelector((store) => store.courseToggle);
   const toggle = useSelector((store) => store.sideBarToggle);
   const dispatch = useDispatch();
-  console.log("course toggle", courseToggle);
+  // console.log("course toggle", courseToggle);
 
   const handleToggle = () => {
     dispatch(ToggleSliceActions.setToggleSlice());
@@ -28,7 +29,7 @@ const Header = () => {
         <section>
           <LinkRouter to="/">
             <img
-              src="./Param_Computers_logo.jpg"
+              src={logoImg}
               alt="param-computers-logo"
               width={"100px"}
               height={"100px"}
@@ -105,7 +106,7 @@ const Header = () => {
                   >
                     Web Development
                   </LinkRouter>
-                  <LinkRouter
+                  {/* <LinkRouter
                     to="/development/app-development-course"
                     className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
                     role="menuitem"
@@ -113,8 +114,8 @@ const Header = () => {
                     id="menu-item-1"
                   >
                     Mobile App Development
-                  </LinkRouter>
-                  <LinkRouter
+                  </LinkRouter> */}
+                  {/* <LinkRouter
                     to="/development/software-development-course"
                     className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
                     role="menuitem"
@@ -122,8 +123,8 @@ const Header = () => {
                     id="menu-item-1"
                   >
                     Software Development
-                  </LinkRouter>
-                  <LinkRouter
+                  </LinkRouter> */}
+                  {/* <LinkRouter
                     to="/development/digital-marketing-course"
                     className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"
                     role="menuitem"
@@ -131,7 +132,7 @@ const Header = () => {
                     id="menu-item-1"
                   >
                     Digital Marketing
-                  </LinkRouter>
+                  </LinkRouter> */}
                   <LinkRouter
                     to="/development/advance-excel-course"
                     className="block px-4 py-2 text-md text-gray-700 hover:bg-teal-50 hover:text-teal-400"

@@ -17,7 +17,7 @@ const MainContainer = () => {
        <Courses/>
        
        <StudentBanner/>
-       <MentorSlider/>
+       {/* <MentorSlider/> */}
        <PassionBanner/>
        <ContactForm/>
       </main>

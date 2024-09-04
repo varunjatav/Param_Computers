@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { registration } from "../../../store/registrationSlice";
-
+// import { registration } from "../../../store/registrationSlice";
+import PaymentQrModal from "../../Modal/paymentQrModal.jsx";
 const CPayment = () => {
   const dispatch = useDispatch();
+  const [showModal, setShowModal] = useState(false);
+  const [payment, setPayment] = useState(5499);
 
   const handlePayment = (values) => {
-    dispatch(registration(values));
-
-    console.log(values);
+    // dispatch(registration(values));
+    setShowModal(true);
+    values.name = "";
+    values.email = "";
+    values.phoneNo = "";
+    values.mode = "";
+    // console.log(values);
   };
 
   return (
+    <>
     <section className="grid grid-cols-1 md:grid-cols-2 mt-20 pt-10">
       <section className="p-10 border-r">
         <Formik
@@ -23,7 +30,7 @@ const CPayment = () => {
             mode: "",
             course: "Mastering C Programming",
             section: "Programming For Everyone",
-            payment: 5499
+            payment: payment
           }}
           validate={(values) => {
             const errors = {};
@@ -152,6 +159,14 @@ const CPayment = () => {
         </div>
       </section>
     </section>
+      {showModal && (
+        <PaymentQrModal
+          payment={payment}
+          setShowModal={setShowModal}
+          showModal={showModal}
+        />
+      )}
+      </>
   );
 };
 

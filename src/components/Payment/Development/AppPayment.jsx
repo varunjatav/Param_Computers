@@ -1,14 +1,14 @@
 import React from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { registration } from "../../../store/registrationSlice";
+// import { registration } from "../../../store/registrationSlice";
 // import { registration } from "../../../../store/registrationSlice";
 
 const AppPayment = () => {
   const dispatch = useDispatch();
 
   const handlePayment = async (values) => {
-    dispatch(registration(values));
+    // dispatch(registration(values));
     values.name = "";
     values.email = "";
     values.phoneNo = "";

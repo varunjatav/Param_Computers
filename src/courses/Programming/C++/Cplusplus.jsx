@@ -46,9 +46,9 @@ const Cplusplus = () => {
           <Link to="syllabus">
             Syllabus
           </Link>
-          <Link to="instructor">
+          {/* <Link to="instructor">
             Instructor
-          </Link>
+          </Link> */}
         </div>
         <Outlet/>
       </section>

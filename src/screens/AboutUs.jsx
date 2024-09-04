@@ -5,6 +5,7 @@ import { SiFuturelearn } from "react-icons/si";
 import MentorSlider from "../components/Mentors";
 import SlideInFromLeft from "../components/SlideInFromLeft";
 import SlideInFromRight from "../components/SlideInFromRight";
+import PassionBanner from "../components/PassionBanner";
 
 const AboutUs = () => {
   return (
@@ -75,7 +76,8 @@ const AboutUs = () => {
         </SlideInFromRight>
        
       </section>
-      <MentorSlider/>
+      <PassionBanner/>
+      {/* <MentorSlider/> */}
     </>
   );
 };

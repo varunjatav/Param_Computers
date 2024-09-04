@@ -2,13 +2,14 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
+import logoImg from "../assets/images/Param_Computers_logo.jpg";
 const Footer = () => {
   return (
     <footer id="contact" className="mt-10 bg-teal-50">
       <div className="flex justify-between items-center p-10 flex-col lg:flex-row">
         <section>
           <img
-            src="./Param_Computers_logo.jpg"
+            src={logoImg}
             alt="param computers logo"
             width={"50px"}
             height={"50px"}
