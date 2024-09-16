@@ -24,14 +24,12 @@ const DatabaseOverview = () => {
       <h1 className="font-bold text-2xl lg:text-3xl my-5">What you will master</h1>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
+          <TiTick /> SQL
+        </li>
+        <li className="flex items-center gap-3 mb-2 text-gray-500">
           <TiTick /> MySQL
         </li>
-        <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick /> Postgres
-        </li>
-        <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick /> MongoDB
-        </li>
+      
       </ul>
     </div>
   );

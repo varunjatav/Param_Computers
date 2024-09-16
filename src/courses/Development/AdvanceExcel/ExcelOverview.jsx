@@ -21,16 +21,15 @@ const ExcelOverview = () => {
         for greater efficiency and success in your professional endeavors.
         Enroll now and unlock the limitless possibilities of Advanced Excel.
       </p>
-      <h1 className="font-bold text-2xl lg:text-3xl my-5">What you will master</h1>
+      <h1 className="font-bold text-2xl lg:text-3xl my-5">
+        What you will master
+      </h1>
       <ul>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick /> HTML
+          <TiTick /> Microsoft Excel
         </li>
         <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick /> CSS
-        </li>
-        <li className="flex items-center gap-3 mb-2 text-gray-500">
-          <TiTick /> JS
+          <TiTick /> Data Analysis using Excel
         </li>
       </ul>
     </div>

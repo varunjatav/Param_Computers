@@ -52,7 +52,7 @@ const Courses = () => {
                 and make data-driven decisions. Learn macros, pivot tables, and
                 more with our hands-on courses. Enroll today!
               </p>
-              <pre>4 curriculum | 4 months | &#8377; 10000</pre>
+              <pre>4 modules | 4 months | &#8377; 4999</pre>
             </div>
           </div>
         </Link>
@@ -64,10 +64,10 @@ const Courses = () => {
               <h2 className="text-2xl font-bold text-gray-600">Database</h2>
               <p className="text-gray-400">
                 Master Database Management Systems at Param Computers. Learn
-                MySQL, PostgreSQL, and MongoDB from experts to excel in data
+                SQL and MySQL from experts to excel in data
                 management. Enroll now and elevate your career.
               </p>
-              <pre>4 curriculum | 4 months | &#8377; 10000</pre>
+              <pre>12 modules | 4 months | &#8377; 4999</pre>
             </div>
           </div>
         </Link>
