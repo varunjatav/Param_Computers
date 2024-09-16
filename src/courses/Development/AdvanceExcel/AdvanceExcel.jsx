@@ -15,7 +15,7 @@ const AdvanceExcel = () => {
           <MdOutlineLiveTv /> 4 months live classes
         </p>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
-          <FaLaptopCode /> hands on training
+          <FaLaptopCode /> 90 minutes daily classes
         </p>
         <p className="text-gray-500 flex gap-3 items-center mb-1">
           <GoProjectSymlink /> live projects
@@ -25,7 +25,7 @@ const AdvanceExcel = () => {
         </p>
         <hr className="my-8" />
         <p className="font-bold text-2xl text-teal-700 pb-5">
-          &#8377; 14000
+          &#8377; 4999
         </p>
         <p className="font-bold text-2xl text-teal-700 pb-5">
           &#8377; 500 (Registration)
