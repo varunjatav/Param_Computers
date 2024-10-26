@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-// import { registration } from "../../../store/registrationSlice";
+import { registration } from "../../../store/registrationSlice";
 import PaymentQrModal from "../../Modal/paymentQrModal.jsx";
 
 const JavaPayment = () => {
@@ -10,13 +10,12 @@ const JavaPayment = () => {
   const [payment, setPayment] = useState(6499);
 
   const handlePayment = (values) => {
-    // dispatch(registration(values));
+    dispatch(registration(values));
     setShowModal(true);
     values.name = "";
     values.email = "";
     values.phoneNo = "";
     values.mode = "";
-    // console.log(values);
   };
 
   return (
@@ -50,7 +49,9 @@ const JavaPayment = () => {
               return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
-              // console.log(values);
+              console.log(values);
+              console.log("handleSubmit");
+              
               handlePayment(values);
             }}
           >
@@ -134,7 +135,7 @@ const JavaPayment = () => {
                 <input
                   type="submit"
                   value="Pay"
-                  disabled={isSubmitting}
+                  // disabled={isSubmitting}
                   className="bg-teal-400 text-white py-2 px-4 rounded-md cursor-pointer hover:bg-teal-700 w-28 focus:ring-4 focus:ring-teal-300"
                 />
               </form>

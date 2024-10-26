@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-// import { registration } from "../../../store/registrationSlice";
+import { registration } from "../../../store/registrationSlice";
 import  PaymentQrModal  from "../../Modal/paymentQrModal.jsx"; 
 
 
@@ -13,10 +13,13 @@ const WebPayment = () => {
   // console.log(showModal);
 
   const handlePayment = (values) => {
-    // dispatch(registration(values));
+    dispatch(registration(values));
 
-    // console.log(values);
     setShowModal(true);
+    values.name = "";
+    values.email = "";
+    values.phoneNo = "";
+    values.mode = "";
   };
 
   return (

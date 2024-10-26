@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-// import { registration } from "../../../store/registrationSlice";
+import { registration } from "../../../store/registrationSlice";
 import PaymentQrModal from "../../Modal/paymentQrModal.jsx"; 
 const DatabasePayment = () => {
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
   const [payment, setPayment] = useState(20499);
   const handlePayment = (values) => {
-    // dispatch(registration(values));
-
+    dispatch(registration(values));
     setShowModal(true);
+    values.name = "";
+    values.email = "";
+    values.phoneNo = "";
+    values.mode = "";
   };
 
   return (

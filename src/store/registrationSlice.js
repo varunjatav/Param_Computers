@@ -4,6 +4,8 @@ import axios from "axios";
 export const registration = createAsyncThunk("registration",
 
 async(values, thunkAPI) => {
+  console.log(values);
+  
   // const cashfree = Cashfree({
   //   mode: "sandbox", //or production
   // });
@@ -14,7 +16,7 @@ async(values, thunkAPI) => {
   //   },
   // };
   // let component = cashfree.create("upiCollect", options);
-// console.log(values);
+console.log(values);
   // component.mount("#my-div");
     try {
       const response = await axios.post("https://param-backend.onrender.com/api/registration", {
@@ -28,10 +30,11 @@ async(values, thunkAPI) => {
       });
       
         // if (response.status === 201 && response.data.paymentSessionId) {
-          // cashfree.checkout({
-          //   paymentSessionId: response.data.paymentSessionId,
-          // });
+        //   cashfree.checkout({
+        //     paymentSessionId: response.data.paymentSessionId,
+        //   });
         // }
+        // console.log(response)
     } catch (error) {
       console.error("Payment failed:", error);
     }
@@ -46,16 +49,27 @@ const registrationSlice = createSlice({
         name: "",
         email: "",
         phoneNo: "",
+        mode:"",
+        course:"",
+        section:"",
+        payment:""
       },
     ],
     error: null,
+    isLoading: false,
   },
-  reducers: {},
-  // extraReducers: (builder) => {
-  //   builder.addCase(registration.fulfilled, (state, { payload }) => {
-  //       state.entities.push(payload);
-  //     });
-  // }
+  // reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(registration.fulfilled, (state, { payload }) => {
+        state.entities.push(payload);
+    });
+    builder.addCase(registration.pending, (state, {payload}) => {
+      state.isLoading = true;
+    });
+    builder.addCase(registration.rejected, (state,{payload}) => {
+      state.error = payload;
+    })
+  }
 });
 
 export default registrationSlice.reducer;

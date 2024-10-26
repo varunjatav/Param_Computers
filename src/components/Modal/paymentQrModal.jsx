@@ -6,7 +6,7 @@ const PaymentQrModal = ({payment, setShowModal, showModal}) => {
     <div
           id="default-modal"
           tabIndex="-1"
-          aria-hidden="true"
+          // aria-hidden="true"
           className="fixed top-0 right-0 left-0 z-50 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50"
         >
           <div className="relative p-4 w-full max-w-2xl bg-white rounded-lg shadow dark:bg-gray-700">

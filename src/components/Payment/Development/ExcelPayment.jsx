@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-// import { registration } from "../../../store/registrationSlice";
-// import { registration } from "../../../store/registrationSlice";
+import { registration } from "../../../store/registrationSlice";
 
 import  PaymentQrModal  from "../../Modal/paymentQrModal.jsx"; 
 
@@ -13,9 +12,12 @@ const ExcelPayment = () => {
   const [payment, setPayment] = useState(20499);
 
   const handlePayment = (values) => {
-    // dispatch(registration(values));
+    dispatch(registration(values));
     setShowModal(true);
-    // console.log(values);
+    values.name = "";
+    values.email = "";
+    values.phoneNo = "";
+    values.mode = "";
   };
 
   return (

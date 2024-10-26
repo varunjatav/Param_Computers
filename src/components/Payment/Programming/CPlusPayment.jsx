@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-// import { registration } from "../../../store/registrationSlice";
+import { registration } from "../../../store/registrationSlice";
 import PaymentQrModal from "../../Modal/paymentQrModal.jsx";
 const CPlusPayment = () => {
   const dispatch = useDispatch();
@@ -9,7 +9,7 @@ const CPlusPayment = () => {
   const [payment, setPayment] = useState(6499);
 
   const handlePayment = (values) => {
-    // dispatch(registration(values));
+    dispatch(registration(values));
 
     // console.log(values);
     setShowModal(true)
