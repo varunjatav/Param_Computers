@@ -1,41 +1,41 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// export const registration = createAsyncThunk("registration",
+export const registration = createAsyncThunk("registration",
 
-// async(values, thunkAPI) => {
-//   const cashfree = Cashfree({
-//     mode: "sandbox", //or production
-//   });
+async(values, thunkAPI) => {
+  // const cashfree = Cashfree({
+  //   mode: "sandbox", //or production
+  // });
 
-//   let options = {
-//     values: {
-//       upiId: "testsuccess@gocash",
-//     },
-//   };
-//   let component = cashfree.create("upiCollect", options);
-// // console.log(values);
-//   component.mount("#my-div");
-//     try {
-//       const response = await axios.post("https://param-backend.onrender.com/api/registration", {
-//         name: values.name,
-//         email: values.email,
-//         phoneNo: values.phoneNo,
-//         mode: values.mode,
-//         course: values.course,
-//         section: values.section,
-//         payment: values.payment,
-//       });
+  // let options = {
+  //   values: {
+  //     upiId: "testsuccess@gocash",
+  //   },
+  // };
+  // let component = cashfree.create("upiCollect", options);
+// console.log(values);
+  // component.mount("#my-div");
+    try {
+      const response = await axios.post("https://param-backend.onrender.com/api/registration", {
+        name: values.name,
+        email: values.email,
+        phoneNo: values.phoneNo,
+        mode: values.mode,
+        course: values.course,
+        section: values.section,
+        payment: values.payment,
+      });
       
-//         if (response.status === 201 && response.data.paymentSessionId) {
-//           cashfree.checkout({
-//             paymentSessionId: response.data.paymentSessionId,
-//           });
-//         }
-//     } catch (error) {
-//       console.error("Payment failed:", error);
-//     }
-// })
+        // if (response.status === 201 && response.data.paymentSessionId) {
+          // cashfree.checkout({
+          //   paymentSessionId: response.data.paymentSessionId,
+          // });
+        // }
+    } catch (error) {
+      console.error("Payment failed:", error);
+    }
+})
 
 
 const registrationSlice = createSlice({

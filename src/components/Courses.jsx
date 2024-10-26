@@ -140,7 +140,7 @@ const Courses = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
         <Link to="/programming/java">
           <div className="cursor-pointer group">
-            <div className="h-[250px] mb-5 bg-[url('https://www.uttarainfo.com/blog/wp-content/uploads/2023/06/screenshot-2021-02-11-at-115416.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
+            <div className="h-[250px] mb-5 bg-[url('https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png')] bg-cover bg-no-repeat bg-center transition-all duration-500 ease-out group-hover:bg-zoom"></div>
             <div className="p-2">
               <h2 className="text-2xl font-bold text-gray-600">Core Java</h2>
               <p className="text-gray-400">
