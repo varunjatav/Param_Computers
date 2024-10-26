@@ -4,7 +4,6 @@ import axios from "axios";
 export const registration = createAsyncThunk("registration",
 
 async(values, thunkAPI) => {
-  console.log(values);
   
   // const cashfree = Cashfree({
   //   mode: "sandbox", //or production
